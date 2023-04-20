@@ -15,14 +15,27 @@ using System.Windows.Shapes;
 
 namespace hogward
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Dumbledore_OnClick(object sender, RoutedEventArgs e)
+        {
+            Dumbledore dumbledore = new Dumbledore();
+            dumbledore.Show();
+        }
+        
+        private void Teachers_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Students_OnClick(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

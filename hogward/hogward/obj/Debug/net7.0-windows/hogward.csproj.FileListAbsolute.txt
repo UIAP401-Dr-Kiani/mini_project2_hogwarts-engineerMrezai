@@ -7,7 +7,6 @@ E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.Ass
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\App.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.cache
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.lref
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.baml
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.g.resources
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.GeneratedMSBuildEditorConfig.editorconfig
@@ -19,3 +18,6 @@ E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\refint\hogward.dll
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.pdb
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.genruntimeconfig.cache
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\ref\hogward.dll
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Dumbledore.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.lref
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Dumbledore.baml
