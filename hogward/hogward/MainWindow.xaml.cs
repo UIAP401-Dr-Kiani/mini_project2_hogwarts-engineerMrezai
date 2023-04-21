@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Dumbledore_OnClick(object sender, RoutedEventArgs e)
