@@ -26,7 +26,7 @@ namespace hogward
 
         private void Dumbledore_OnClick(object sender, RoutedEventArgs e)
         {
-            Dumbledore dumbledore = new Dumbledore();
+            DumbledoreMassageSender dumbledore = new DumbledoreMassageSender();
             dumbledore.Show();
         }
         

@@ -9,5 +9,6 @@
         <Button Content="Dumbledore" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" x:Name="Dumbledore" Height="20" Width="180" Click="Dumbledore_OnClick" ></Button>
         <Button Content="Teachers" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="Teachers" Height="20" Width="180" Click="Teachers_OnClick"></Button>
         <Button Content="Students" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" x:Name="Students" Height="20" Width="180" Click="Students_OnClick"></Button>
+        
     </Grid>
 </Window>
