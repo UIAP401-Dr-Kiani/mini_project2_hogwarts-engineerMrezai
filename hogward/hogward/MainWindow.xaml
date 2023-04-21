@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Login Page" Height="150" Width="215">
+        Title="MainWindow" Height="150" Width="215">
     <Grid>
         <Button Content="Dumbledore" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" x:Name="Dumbledore" Height="20" Width="180" Click="Dumbledore_OnClick" ></Button>
         <Button Content="Teachers" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="Teachers" Height="20" Width="180" Click="Teachers_OnClick"></Button>
         <Button Content="Students" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" x:Name="Students" Height="20" Width="180" Click="Students_OnClick"></Button>
-        
     </Grid>
 </Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="hogward.DumbledoreLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:hogward"
+        mc:Ignorable="d"
+        Title="DumbledoreLogin" Height="170" Width="215">
+    <Grid>
+        <TextBox Text="UserName" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" x:Name="UserName" Height="20" Width="180" TextAlignment="Center"/>
+        <TextBox Text="PassWord" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="PassWord" Height="20" Width="180" TextAlignment="Center"/>
+        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" x:Name="Students" Height="20" Width="180" Click="Students_OnClick"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" x:Name="Error" Height="20" Width="180" TextAlignment="Center"/>
+    </Grid>
+</Window>

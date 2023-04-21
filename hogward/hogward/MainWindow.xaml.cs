@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace hogward
 {
     public partial class MainWindow : Window
@@ -26,7 +25,7 @@ namespace hogward
 
         private void Dumbledore_OnClick(object sender, RoutedEventArgs e)
         {
-            DumbledoreMassageSender dumbledore = new DumbledoreMassageSender();
+            DumbledoreLogin dumbledore = new DumbledoreLogin();
             dumbledore.Show();
         }
         
