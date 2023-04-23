@@ -1,0 +1,13 @@
+﻿<Window x:Class="hogward.Windows.Error_page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hogward.Windows"
+        mc:Ignorable="d"
+        Title="Error" Height="130" Width="215" ResizeMode="NoResize" >
+    <Grid>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="30" Width="180" Name="ErrorText" Text="" TextAlignment="Center" TextWrapping="Wrap"/>
+        <Button Content="OK" Height="20" Width="180" Margin="10,50,0,0" Name="OK" Click="OK_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

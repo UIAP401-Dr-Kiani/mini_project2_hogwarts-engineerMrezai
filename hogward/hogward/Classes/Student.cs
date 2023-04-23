@@ -1,6 +1,4 @@
-﻿using System.Xml.Schema;
-
-namespace hogward;
+﻿namespace hogward;
 
 public class Student
 {
@@ -10,13 +8,13 @@ public class Student
 
     protected void CatchTrain()
     {
-        
+
     }
 
     protected void RequestTrain()
     {
-        
+
     }
-    
-    
+
+
 }

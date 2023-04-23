@@ -17,7 +17,7 @@ public enum Roles
 
 public enum Pets
 {
-    l,rat,cat
+    l, rat, cat
 }
 
 public enum Type

@@ -1,11 +1,9 @@
 ﻿<Window x:Class="hogward.DumbledoreMassageSender"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         xmlns:local="clr-namespace:hogward"
-        mc:Ignorable="d"
-        Title="Dumbledore Massage Sender" Height="240" Width="265">
+        Title="Massage" Height="240" Width="265" ResizeMode="CanMinimize">
     <Grid>
         <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="25" Width="105" x:Name="DatePicker"> </DatePicker>
         <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" Height="25" Width="35" x:Name = "Hour" TextAlignment="Center"></TextBox>
@@ -13,6 +11,6 @@
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="195,10,0,0" Height="25" Width="45" x:Name="Time"> <ComboBoxItem Content="AM"/> <ComboBoxItem Content="PM"/></ComboBox>
         <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,45,0,0" Height="100" Width="230" x:Name="Massage" TextAlignment="Left"/>
         <Button Content="Send Massage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,155,0,0" Height="25" Width="110" x:Name="MassageSender" Click="MassageSender_OnClick"/>
-        <Button Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,155,0,0" Height="25" Width="110" x:Name="Refrash" Click="MassageSender_OnClick"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,155,0,0" Height="25" Width="110" x:Name="Refresh" Click="Refresh_Click"/>
     </Grid>
 </Window>

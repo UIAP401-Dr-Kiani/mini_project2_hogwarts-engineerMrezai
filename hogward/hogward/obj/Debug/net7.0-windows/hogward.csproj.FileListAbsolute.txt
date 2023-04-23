@@ -4,10 +4,8 @@ E:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.runtimecon
 E:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.dll
 E:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.pdb
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.AssemblyReference.cache
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\App.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.cache
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.baml
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.g.resources
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.GeneratedMSBuildEditorConfig.editorconfig
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.AssemblyInfoInputs.cache
@@ -19,5 +17,13 @@ E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.pdb
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.genruntimeconfig.cache
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\ref\hogward.dll
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.lref
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\DumbledoreMassageSender.g.cs
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\DumbledoreMassageSender.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreLogin.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreMassageSender.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreWorkDesk.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreLogin.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreMassageSender.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreWorkDesk.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.baml

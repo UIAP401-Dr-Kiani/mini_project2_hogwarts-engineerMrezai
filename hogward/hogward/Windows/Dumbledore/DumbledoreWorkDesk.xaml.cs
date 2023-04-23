@@ -13,6 +13,6 @@ public partial class DumbledoreWorkDesk : Window
     {
         DumbledoreMassageSender dumbledoreMassageSender = new DumbledoreMassageSender();
         dumbledoreMassageSender.Show();
-       
+
     }
 }
