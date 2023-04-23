@@ -2,8 +2,13 @@
 
 public class Human
 {
-    protected string Name, Family, BirthDay, Father, UserName, Password;
-    protected BreedType Breedtype;
-    protected Gender Gender;
+    protected string name { get; set; }
+    protected string family { get; set; }
+    protected string dateOfBirth { get; set; } 
+    protected string father { get; set; }
+    protected string username { get; set; }
+    protected string password { get; set; }
+    protected BreedType type { get; set; }
+    protected Gender gender { get; set; }
 
 }

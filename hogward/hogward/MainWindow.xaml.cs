@@ -8,7 +8,7 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
-
+            program.StudentDetecter();
         }
 
         private void Students_OnClick(object sender, RoutedEventArgs e)
@@ -40,7 +40,10 @@ namespace hogward
                 else if (Type.Text == "Student")
                 {
                     if (UserName.Text == "" && PassWord.Text == "")
-                    { }
+                    {
+                        StudentDesk studentDesk = new StudentDesk();
+                        studentDesk.Show();
+                    }
                     else
                     {
                         throw new System.Exception(); 

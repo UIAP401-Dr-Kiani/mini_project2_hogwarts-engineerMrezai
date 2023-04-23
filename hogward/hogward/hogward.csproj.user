@@ -10,12 +10,24 @@
     <Compile Update="Windows\Error\Error page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\Student\Email.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Student\StudentDesk.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Error\Error page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Student\Email.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Student\StudentDesk.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

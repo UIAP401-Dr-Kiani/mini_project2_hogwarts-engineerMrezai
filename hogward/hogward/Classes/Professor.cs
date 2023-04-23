@@ -1,8 +1,10 @@
-﻿namespace hogward;
+﻿using System.Dynamic;
 
-public class Professor
+namespace hogward;
+
+public class Professor : AuthorizePersons
 {
-    protected string[] time;
-    protected string[] lessens;
-    protected bool SimultaneousTeaching;
+    protected string time { get; set; }
+    protected string lessens { get; set; } 
+    protected bool SimultaneousTeaching { get; set; }
 }

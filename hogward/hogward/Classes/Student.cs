@@ -1,20 +1,8 @@
 ﻿namespace hogward;
 
-public class Student
+public class Student : AuthorizePersons
 {
-    protected string PassedUnits;
-    protected string Term;
-    protected string HostelNumber;
-
-    protected void CatchTrain()
-    {
-
-    }
-
-    protected void RequestTrain()
-    {
-
-    }
-
-
+    protected string PassedUnits { get; set; }
+    protected string Term { get; set; }
+    protected string HostelNumber { get; set; }
 }

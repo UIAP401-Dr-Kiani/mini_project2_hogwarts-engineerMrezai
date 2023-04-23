@@ -25,3 +25,7 @@ E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.baml
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Email.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Email.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.baml
