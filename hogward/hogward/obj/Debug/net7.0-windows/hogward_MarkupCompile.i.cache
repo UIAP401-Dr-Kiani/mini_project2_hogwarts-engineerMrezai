@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 E:\Kiani Git\hogward\hogward\hogward\App.xaml
-51137125888
+41280517957
 
-17-1240321152
+16-2117558341
 1981827736222
-MainWindow.xaml;Windows\Dumbledore\DumbledoreLogin.xaml;Windows\Dumbledore\DumbledoreMassageSender.xaml;Windows\Dumbledore\DumbledoreWorkDesk.xaml;Windows\Error\Error page.xaml;
+MainWindow.xaml;Windows\Dumbledore\DumbledoreMassageSender.xaml;Windows\Dumbledore\DumbledoreWorkDesk.xaml;Windows\Error\Error page.xaml;
 
-True
+False
 
