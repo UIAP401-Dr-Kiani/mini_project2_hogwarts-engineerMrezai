@@ -1,6 +1,9 @@
 ﻿using hogward.Windows;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
+using System.Windows.Documents;
+
 namespace hogward
 {
     public partial class MainWindow : Window
@@ -8,11 +11,12 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
-            program.StudentDetecter();
+            
         }
 
         private void Students_OnClick(object sender, RoutedEventArgs e)
         {
+            List<AuthorizePersons> authorizePersons = program.AuthorizePersonsDetecter();
             try 
             {
                 if (Type.Text == "Dumbledore")
@@ -30,24 +34,17 @@ namespace hogward
                 }
                 else if (Type.Text == "Professor")
                 {
-                    if (UserName.Text == "" && PassWord.Text == "")
-                    { }
-                    else
-                    { 
-                        throw new System.Exception(); 
-                    }
+                    program.LoginCheck("teacher", UserName.Text, PassWord.Text);
+                    Window window = new Window();
+                    window.Show();
+                    this.Close();
                 }
                 else if (Type.Text == "Student")
                 {
-                    if (UserName.Text == "" && PassWord.Text == "")
-                    {
-                        StudentDesk studentDesk = new StudentDesk();
-                        studentDesk.Show();
-                    }
-                    else
-                    {
-                        throw new System.Exception(); 
-                    }
+                    program.LoginCheck("student",UserName.Text,PassWord.Text);
+                    StudentDesk studentDesk = new StudentDesk();
+                    studentDesk.Show();
+                    this.Close();
                 }
             }
             catch

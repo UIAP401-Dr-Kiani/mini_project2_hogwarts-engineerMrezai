@@ -2,12 +2,11 @@
 
 public class AuthorizePersons : Human
 {
-    protected string Room { get; set; }
-    protected string Curriculum { get; set; }
-    protected string Group { get; set; }
-    protected string Massage { get; set; }
-
-    protected Pets pet { get; set; }
-    protected bool Baggage { get; set; }
-    protected Roles role { get; set; }
+    string room { get; set; }
+    public string curriculum { get; set; }
+    public string group { get; set; }
+    public string massage { get; set; }
+    public string pet { get; set; }
+    public bool baggage { get; set; }
+    public string role { get; set; }
 }

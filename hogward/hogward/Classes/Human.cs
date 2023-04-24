@@ -2,13 +2,16 @@
 
 public class Human
 {
-    protected string name { get; set; }
-    protected string family { get; set; }
-    protected string dateOfBirth { get; set; } 
-    protected string father { get; set; }
-    protected string username { get; set; }
-    protected string password { get; set; }
-    protected BreedType type { get; set; }
-    protected Gender gender { get; set; }
+    public string Name { get; set; }
+    public string family { get; set; }
+    public string dateOfBirth { get; set; }
+    public string father { get; set; }
+    public string username { get; set; }
+    public string password { get; set; }
+    //public BreedType type { get; set; }
+    public string type { get; set; }
+    //public Gender gender { get; set; }
+    public string gender { get; set; }
 
 }
+

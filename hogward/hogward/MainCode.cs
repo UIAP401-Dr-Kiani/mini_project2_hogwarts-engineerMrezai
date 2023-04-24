@@ -4,48 +4,35 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
-using System.Text.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Security.RightsManagement;
+using hogward.Windows;
 
 class program
 {
-    //    public static void  StudentDetecter()
-    //    { 
-    //        {
-    //            List<string> Teachaer = new List<string[]>();
-    //            List<string[]> Student = new List<string[]>();
-    //            AuthorizePersons[] authorizePersons; 
-    //            using (StreamReader file = new StreamReader("TXT_DATA.tsv"))
-    //            {
-    //                string ln;
-    //                while ((ln = file.ReadLine()) != null)
-    //                {
-    //                    string[] human = ln.Split("\t").ToArray<string>(); 
-    //                    if (human[8] == "teacher")
-    //                    {
-    //                        Teachaer.Add(human);
-    //                    }
-    //                    else if (human[8] == "student") 
-    //                    {
-    //                        Student.Add(human);
-    //                    }
-    //                }
-    //                file.Close();
-    //            }
-    //        }
-    //    }
-    //}
-
-
-    public static void StudentDetecter()
-    {
-        List<AuthorizePersons> source = new List<AuthorizePersons>();
-
-        using (StreamReader r = new StreamReader("JSON_DATA.json"))
+    public static List<AuthorizePersons> AuthorizePersonsDetecter()
         {
-            string json = r.ReadToEnd();
-            source = JsonSerializer.Deserialize<List<AuthorizePersons>>(json);
+            dynamic jsonFormFile = JsonConvert.DeserializeObject<List<AuthorizePersons>>(File.ReadAllText("JSON_DATA.json"));
+            return jsonFormFile;
         }
+    public static int LoginCheck(string Type ,string UserName,string Password)
+    {
+        List<AuthorizePersons> authorizePersons = program.AuthorizePersonsDetecter();
+        for (int i = 0; i < authorizePersons.Count; i++)
+        {
+            if (authorizePersons[i].role == Type)
+            {
+                if (UserName == authorizePersons[i].username && Password == authorizePersons[i].password)
+                {
+                    return 1;
+                }
+            }
+        }
+        throw new System.Exception();
+        return 0;
     }
+
 }
 
 class Drom
