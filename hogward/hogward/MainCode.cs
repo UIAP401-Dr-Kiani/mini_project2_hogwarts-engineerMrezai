@@ -9,40 +9,45 @@ using Newtonsoft.Json.Linq;
 using System.Security.RightsManagement;
 using hogward.Windows;
 
-class program
+class Program
 {
-    public static List<AuthorizePersons> AuthorizePersonsDetecter()
-        {
-            dynamic jsonFormFile = JsonConvert.DeserializeObject<List<AuthorizePersons>>(File.ReadAllText("JSON_DATA.json"));
-            return jsonFormFile;
-        }
+
+    public static int index { get; set; }
+
+    //Detecter
+    public static AuthorizePersons[] AuthorizePersonsDetecter()
+    {
+            return JsonConvert.DeserializeObject<AuthorizePersons[]>(File.ReadAllText("JSON_DATA.json"));
+    }
+
+
+    //login page
     public static int LoginCheck(string Type ,string UserName,string Password)
     {
-        List<AuthorizePersons> authorizePersons = program.AuthorizePersonsDetecter();
-        for (int i = 0; i < authorizePersons.Count; i++)
+        AuthorizePersons[] authorizePersons = Program.AuthorizePersonsDetecter();
+        for (int i = 0; i < authorizePersons.Length; i++)
         {
             if (authorizePersons[i].role == Type)
             {
-                if (UserName == authorizePersons[i].username && Password == authorizePersons[i].password)
+                if (UserName == authorizePersons[i].Username && Password == authorizePersons[i].Password)
                 {
+                    index = i;
                     return 1;
                 }
             }
         }
         throw new System.Exception();
-        return 0;
     }
 
-}
-
-class Drom
-{
-    struct dorm
+    //Professor Class selector
+    public static int ProfessorSelector(string lesson1,string lesson2, string lesson3)
     {
-        string Group;
-        static int Floor = 4;
-        static int Room = 5;
-        static int Bed = 3;
-        Gender gender;
+        AuthorizePersons[] authorizePersons = Program.AuthorizePersonsDetecter();
+        if (lesson1 != lesson2 && lesson2 != lesson3 && lesson3 != lesson1)
+        {
+            return 1;
+        }
+        else
+            throw new Exception();
     }
 }

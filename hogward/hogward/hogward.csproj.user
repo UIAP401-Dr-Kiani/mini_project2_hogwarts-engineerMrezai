@@ -10,7 +10,13 @@
     <Compile Update="Windows\Error\Error page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\Student\Email.xaml.cs">
+    <Compile Update="Windows\Professor\Lesson-Selection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Professor\ProfessorDesk.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Student\TicketEmail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\Student\StudentDesk.xaml.cs">
@@ -24,7 +30,13 @@
     <Page Update="Windows\Error\Error page.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\Student\Email.xaml">
+    <Page Update="Windows\Professor\Lesson-Selection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Professor\ProfessorDesk.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Student\TicketEmail.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Student\StudentDesk.xaml">

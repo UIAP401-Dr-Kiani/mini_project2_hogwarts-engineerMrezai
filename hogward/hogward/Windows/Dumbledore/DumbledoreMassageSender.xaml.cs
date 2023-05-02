@@ -1,5 +1,8 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 using System.Windows;
+using System.Windows.Documents;
 
 namespace hogward;
 
@@ -11,10 +14,18 @@ public partial class DumbledoreMassageSender : Window
     }
     private void MassageSender_OnClick(object sender, RoutedEventArgs e)
     {
-        using (StreamWriter writer = new StreamWriter("Dumbledore/Massage.txt"))
+        int count = 0;
+        AuthorizePersons[] _AuthorizePersons =  Program.AuthorizePersonsDetecter();
+        for(int i=0; i<_AuthorizePersons.Length;i++)
         {
-            writer.WriteLine(this.Massage.Text + "\n" + DatePicker.Text + "\n" + Hour.Text + ":" + Min.Text + " " + Time.Text);
+            if (_AuthorizePersons[i].role == "student")
+            {
+                count++;
+                _AuthorizePersons[i].massage[0] = Massage.Text + DatePicker.Text + Hour.Text + Min.Text+ Time.Text + count;
+            }
         }
+        string json = JsonConvert.SerializeObject(_AuthorizePersons);
+        System.IO.File.WriteAllText("JSON_DATA.json", json);
         MessageBox.Show("Massage sanded successfully");
     }
 

@@ -2,7 +2,7 @@
 
 public enum Gender
 {
-    Man, Woman, etc
+    female, male
 }
 
 public enum BreedType
