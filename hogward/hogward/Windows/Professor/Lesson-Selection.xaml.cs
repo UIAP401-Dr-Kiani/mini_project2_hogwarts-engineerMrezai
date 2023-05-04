@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace hogward.Windows.Professor
 {
@@ -21,9 +22,19 @@ namespace hogward.Windows.Professor
     {
         public Lesson_Selection()
         {
-            var authorizePersons = Program.AuthorizePersonsDetecter();
+            int count = -1;
+            var professors = Program.AuthorizePersonsDetecter("teacher");
+            string[] Person = File.ReadAllText("UserIndex.txt").Split(" ");
+            for (int i = 0;i< professors.Length;i++)
+            {
+                if (professors[i].Username == Person[0] && professors[i].Password == (Person[1]))
+                {
+                    count = i;
+                    break;
+                }
+            }
             InitializeComponent();
-            Profesore.Text = authorizePersons[Program.index].Name + " " + authorizePersons[Program.index].Family;
+            Profesore.Text = professors[count].Name + " " + professors[count].Family;
         }
 
         private void Select_Click(object sender, RoutedEventArgs e)
@@ -33,7 +44,7 @@ namespace hogward.Windows.Professor
                 Program.ProfessorSelector(lesson1.Text, lesson2.Text, lesson3.Text);
             }
             catch
-            {
+            {   
                 
             }
         }

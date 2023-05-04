@@ -7,23 +7,11 @@ namespace hogward;
 
 public class Lesson
 {
-    protected int Time = 2;
-    protected int NumberOfStudents;
+    protected string Time { get; set; } = "0:00 , 0:00";
+    protected int NumberOfStudents { get; set; }
     protected int Capacity = 50;
-    protected int PresentationSemester;
-    protected string Name;
-    protected Lesson()
-    {
-        try { }
-        catch (System.NullReferenceException e)
-        {
-            using (StreamWriter ln = new StreamWriter("Error.txt"))
-            {
-                ln.WriteLine(e.Message);
-                ln.Close();
-            }
-        }
-    }
+    protected int PresentationSemester { get; set; }
+    protected string Name { get; set; } = "not set";
 }
 
 

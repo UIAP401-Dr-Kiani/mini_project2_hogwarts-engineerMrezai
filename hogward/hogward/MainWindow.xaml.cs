@@ -12,12 +12,12 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
-            
+            FileName.Test();
         }
 
         private void Students_OnClick(object sender, RoutedEventArgs e)
         {
-            AuthorizePersons[] authorizePersons = Program.AuthorizePersonsDetecter();
+            var authorizePersons = Program.AuthorizePersonsDetecter("list");
             try
             { 
                 if (Type.Text == "Dumbledore")
@@ -26,8 +26,9 @@ namespace hogward
                     {
                         DumbledoreWorkDesk dumbledoreWorkDesk = new DumbledoreWorkDesk();
                         dumbledoreWorkDesk.Show();
-                        Program.index = -1;
+                        Program.Writer("-1" , "-1");
                         this.Close();
+
                     }
                     else
                     {

@@ -10,6 +10,6 @@ public class AuthorizePersons : Human
     public string group { get; set; }
     public string[] massage { get; set; } = new string[100];
     public string pet { get; set; }
-    public bool baggage { get; set; }
+    public bool baggage { get; set; } = false;
     public string role { get; set; }
 }

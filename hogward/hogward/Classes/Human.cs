@@ -2,7 +2,7 @@
 
 public class Human
 {
-    public string Name { get; set; }
+    public string Name { get; set; } 
     public string Family { get; set; }
     public string DateOfBirth { get; set; }
     public string Father { get; set; }
