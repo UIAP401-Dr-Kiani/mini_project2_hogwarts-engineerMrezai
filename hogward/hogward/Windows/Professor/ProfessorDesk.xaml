@@ -1,0 +1,12 @@
+﻿<Window x:Class="hogward.Windows.Professor.ProfessorDesk"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hogward.Windows.Professor"
+        mc:Ignorable="d"
+        Title="ProfessorDesk" Height="150" Width="215" ResizeMode="CanMinimize">
+    <Grid>
+        <Button Content="Lesson Selection" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" x:Name="LessonSelction" Click="LessonSelction_Click" Height="20" Width="180" />
+    </Grid>
+</Window>

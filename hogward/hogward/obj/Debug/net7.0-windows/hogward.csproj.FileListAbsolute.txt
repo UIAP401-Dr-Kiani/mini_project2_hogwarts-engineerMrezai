@@ -25,9 +25,50 @@ E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.baml
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.baml
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Email.g.cs
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.g.cs
-E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Email.baml
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.baml
 E:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.CopyComplete
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\TicketEmail.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\TicketEmail.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\Lesson-Selection.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorDesk.g.cs
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\Lesson-Selection.baml
+E:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorDesk.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.dll
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\refint\hogward.dll
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.pdb
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.AssemblyReference.cache
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreMassageSender.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreWorkDesk.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\Lesson-Selection.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorDesk.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\TicketEmail.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\App.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.cache
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward_MarkupCompile.lref
+D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.exe
+D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.deps.json
+D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.runtimeconfig.json
+D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.dll
+D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\hogward.pdb
+D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreMassageSender.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreWorkDesk.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\Lesson-Selection.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorDesk.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\TicketEmail.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.g.resources
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.AssemblyInfoInputs.cache
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.AssemblyInfo.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.CoreCompileInputs.cache
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.CopyComplete
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.genruntimeconfig.cache
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\ref\hogward.dll

@@ -6,10 +6,23 @@
         mc:Ignorable="d"
         Title="Login" Height="170" Width="215" ResizeMode="NoResize">
     <Grid>
-        <TextBox Text="Username" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" x:Name="UserName" Height="20" Width="180" TextAlignment="Center"/>
-        <TextBox Text="Password" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="PassWord" Height="20" Width="180" TextAlignment="Center"/>
-        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" x:Name="Students" Height="20" Width="180" Click="Students_OnClick"/>
-        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" Height="20" Width="180" x:Name="Type">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF1F7014" Offset="0.853"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox Text="User-name" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" x:Name="UserName" Height="20" Width="180" TextAlignment="Center" Background="#FF5E5F00" BorderBrush="#FF5E5F00" Foreground="White"/>
+        <TextBox Text="Password" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="PassWord" Height="20" Width="180" TextAlignment="Center" Background="#FF5E5F00" BorderBrush="#FF5E5F00" Foreground="White"/>
+        <Button Content="Login" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" x:Name="Students" Height="20" Width="180" Click="Students_OnClick" BorderBrush="#FF5E5F00" Foreground="#FF28FF00" Background="#FF5F5600">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" Height="20" Width="180" x:Name="Type" Background="#FF5E5F00" BorderBrush="#FF5E5F00" Foreground="#FF5E5F00">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
             <ComboBoxItem Content="Dumbledore"/>
             <ComboBoxItem Content="Professor"/>
             <ComboBoxItem Content="Student"/>
