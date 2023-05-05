@@ -1,5 +1,6 @@
 ﻿using hogward.Windows;
 using hogward.Windows.Professor;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
@@ -12,12 +13,13 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
-            FileName.Test();
+            var professors = Program.ProfessorDetecter();
+            File.WriteAllText("JSON_DATA.json", JsonConvert.SerializeObject(professors));
         }
 
         private void Students_OnClick(object sender, RoutedEventArgs e)
         {
-            var authorizePersons = Program.AuthorizePersonsDetecter("list");
+            var authorizePersons = Program.AuthorizePersonsDetecter();
             try
             { 
                 if (Type.Text == "Dumbledore")

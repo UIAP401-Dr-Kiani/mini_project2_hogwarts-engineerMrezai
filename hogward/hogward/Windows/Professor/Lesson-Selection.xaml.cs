@@ -20,10 +20,11 @@ namespace hogward.Windows.Professor
     /// </summary>
     public partial class Lesson_Selection : Window
     {
+        int count = -1;
         public Lesson_Selection()
         {
-            int count = -1;
-            var professors = Program.AuthorizePersonsDetecter("teacher");
+            
+            var professors = Program.ProfessorDetecter();
             string[] Person = File.ReadAllText("UserIndex.txt").Split(" ");
             for (int i = 0;i< professors.Length;i++)
             {
@@ -34,18 +35,22 @@ namespace hogward.Windows.Professor
                 }
             }
             InitializeComponent();
-            Profesore.Text = professors[count].Name + " " + professors[count].Family;
+            ID.Text = professors[count].Name + " " + professors[count].Family;
         }
 
         private void Select_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Program.ProfessorSelector(lesson1.Text, lesson2.Text, lesson3.Text);
+                string Lesson1 = lesson1.Text + " " + lesson1Date1.Text + "-" + lesson1Time1.Text + " " + lesson1Date2.Text + "-" + lesson1Time2.Text;
+                string Lesson2 = lesson2.Text + " " + lesson2Date1.Text + "-" + lesson2Time1.Text + " " + lesson2Date2.Text + "-" + lesson2Time2.Text;
+                string Lesson3 = lesson3.Text + " " + lesson3Date1.Text + "-" + lesson3Time1.Text + " " + lesson1Date2.Text + "-" + lesson1Time2.Text;
+                Program.ProfessorSelector(Lesson1, Lesson2, Lesson3 , count);
             }
             catch
             {   
-                
+                Error_page error_Page = new Error_page();
+                error_Page.Show();
             }
         }
     }
