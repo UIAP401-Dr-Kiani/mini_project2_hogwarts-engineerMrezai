@@ -21,14 +21,13 @@ namespace hogward.Windows.Student
     /// </summary>
     public partial class StudentLessonSelection : Window
     {
-        
+
         public StudentLessonSelection()
         {
             InitializeComponent();
 
             var studetns = Program.StudentDetecter();
-            string[] userid = File.ReadAllText("UserIndex.txt").Split(" ");
-            string[] resualt =  Program.UserFounder(userid[0], userid[1]);
+            string[] resualt = Program.UserFounder();
             StudentLessonsSelection.Title = resualt[0] + " " + resualt[1];
             int count = Convert.ToInt32(resualt[2]);
             AllowClass(studetns[count].Term);
@@ -37,7 +36,7 @@ namespace hogward.Windows.Student
         public void AllowClass(int term)
         {
             var lessons = Program.LessonDetecter();
-            for(int i = 0; i< lessons.Length; i++)
+            for (int i = 0; i < lessons.Length; i++)
             {
                 if (lessons[i].PresentationSemester == term)
                 {
@@ -46,17 +45,17 @@ namespace hogward.Windows.Student
                         Chemistry.IsEnabled = true;
                         Chemistry.ItemsSource = Program.AllowProfesorLesson("Chemistry");
                     }
-                    else if(lessons[i].Name == "BotanicalOne")
+                    else if (lessons[i].Name == "BotanicalOne")
                     {
                         BotanicalOne.IsEnabled = true;
                         BotanicalOne.ItemsSource = Program.AllowProfesorLesson("BotanicalOne");
                     }
-                    else if(lessons[i].Name == "BotanicalTwo")
+                    else if (lessons[i].Name == "BotanicalTwo")
                     {
                         BotanicalTwo.IsEnabled = true;
                         BotanicalTwo.ItemsSource = Program.AllowProfesorLesson("BotanicalTwo");
                     }
-                    else if(lessons[i].Name == "BotanicalThree")
+                    else if (lessons[i].Name == "BotanicalThree")
                     {
                         BotanicalThree.IsEnabled = true;
                         BotanicalThree.ItemsSource = Program.AllowProfesorLesson("BotanicalThree");
@@ -85,74 +84,42 @@ namespace hogward.Windows.Student
             }
         }
 
-        private void BotanicalOne_Click(object sender, RoutedEventArgs e)
+        private void Select_Click(object sender, RoutedEventArgs e)
         {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            string[] resualt = Program.UserFounder();
+            var studetns = Program.StudentDetecter();
+            if (Chemistry.IsEnabled == true)
             {
-                Writer.Write("BotanicalOne");
+                studetns[Convert.ToInt16(resualt[2])].plant += "Chemistry" + " " + Chemistry.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
-        }
-
-        private void BotanicalTwo_Click(object sender, RoutedEventArgs e)
-        {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            if (BotanicalOne.IsEnabled == true)
             {
-                Writer.Write("BotanicalTwo");
+                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalOne" + " " + BotanicalOne.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
-        }
-
-        private void BotanicalThree_Click(object sender, RoutedEventArgs e)
-        {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            if (BotanicalTwo.IsEnabled == true)
             {
-                Writer.Write("BotanicalThree");
+                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalTwo" + " " + BotanicalTwo.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
-        }
-
-        private void BotanicalFour_Click(object sender, RoutedEventArgs e)
-        {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            if (BotanicalThree.IsEnabled == true)
             {
-                Writer.Write("BotanicalFour");
+                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalThree" + " " + BotanicalThree.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
-        }
-
-        private void Occultism_Click(object sender, RoutedEventArgs e)
-        {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            if(BotanicalFour.IsEnabled == true)
             {
-                Writer.Write("Occultism");
+                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalFour" + " " + BotanicalFour.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
-        }
-
-        private void Sport_Click(object sender, RoutedEventArgs e)
-        {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            if(Occultism.IsEnabled == true)
             {
-                Writer.Write("Sport");
+                studetns[Convert.ToInt16(resualt[2])].plant += "Occultism" + " " + Occultism.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
-        }
-
-        private void Plant_Click(object sender, RoutedEventArgs e)
-        {
-            using (var Writer = new StreamWriter("LessonsDeteail.txt"))
+            if(Sport.IsEnabled == true)
             {
-                Writer.Write("Plant");
+                studetns[Convert.ToInt16(resualt[2])].plant += "Sport" + " " + Sport.Text + "-";
             }
-            Lessons lesson = new Lessons();
-            lesson.Show();
+            if(Plant.IsEnabled == true)
+            {
+                studetns[Convert.ToInt16(resualt[2])].plant += "Plant" + " " + Plant.Text + "-";
+            }
         }
     }
 }

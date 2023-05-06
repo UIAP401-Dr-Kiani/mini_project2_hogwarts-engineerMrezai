@@ -118,7 +118,7 @@ class Program
 
 
     //userfounder
-    public static string[] UserFounder(string username, string password)
+    public static string[] UserFounder()
     {
         string count = "-1";
         string[] text = new string[3];

@@ -5,15 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hogward.Windows.Student"
         mc:Ignorable="d"
-        Title="" Height="110" Width="565" x:Name="StudentLessonsSelection">
+        Title="" Height="215" Width="565" x:Name="StudentLessonsSelection">
     <Grid>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="20" Width="120" x:Name="Chemistry" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,10,0,0" Height="20" Width="120" x:Name="BotanicalOne" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="270,10,0,0" Height="20" Width="120" x:Name="BotanicalTwo" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,10,0,0" Height="20" Width="120" x:Name="BotanicalThree" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" Height="20" Width="120" x:Name="BotanicalFour" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,40,0,0" Height="20" Width="120" x:Name="Occultism" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="270,40,0,0" Height="20" Width="120" x:Name="Sport" IsEnabled="False"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,40,0,0" Height="20" Width="120" x:Name="Plant" IsEnabled="False"/>
+        <TextBlock Text="Chemistry" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0" Height="20" Width="160" x:Name="Chemistry" IsEnabled="False"/>
+
+
+        <TextBlock Text="BotanicalOne" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,10,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="270,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,10,0,0" Height="20" Width="160" x:Name="BotanicalOne" IsEnabled="False"/>
+
+
+        <TextBlock Text="BotanicalTwo" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,40,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="10,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,40,0,0" Height="20" Width="160" x:Name="BotanicalTwo" IsEnabled="False"/>
+
+
+        <TextBlock Text="BotanicalThree" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,40,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="270,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,40,0,0" Height="20" Width="160" x:Name="BotanicalThree" IsEnabled="False"/>
+
+
+
+        <TextBlock Text="BotanicalFour" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,70,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="10,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,70,0,0" Height="20" Width="160" x:Name="BotanicalFour" IsEnabled="False"/>
+
+
+        <TextBlock Text="Occultism" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,70,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="270,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,70,0,0" Height="20" Width="160" x:Name="Occultism" IsEnabled="False"/>
+
+
+        <TextBlock Text="Sport" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,100,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="10,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,100,0,0" Height="20" Width="160" x:Name="Sport" IsEnabled="False"/>
+
+
+        <TextBlock Text="Plant" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,100,0,0" Height="20" Width="80" TextAlignment="Center"/>
+        <Border Height="20" Width="80" Margin="270,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,100,0,0" Height="20" Width="160" x:Name="Plant" IsEnabled="False"/>
+
+
+
+        <Button Content="Select" Height="20" Width="180" Margin="0,139,0,10" HorizontalAlignment="Center" x:Name="Select" Click="Select_Click"/>
     </Grid>
 </Window>
