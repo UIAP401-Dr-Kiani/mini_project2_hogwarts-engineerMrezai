@@ -1,4 +1,5 @@
-﻿using hogward.Windows.Student;
+﻿using hogward.Windows.Professor;
+using hogward.Windows.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,23 +14,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace hogward.Windows
+namespace hogward.Windows;
+
+/// <summary>
+/// Interaction logic for StudentDesk.xaml
+/// </summary>
+public partial class StudentDesk : Window
 {
-    /// <summary>
-    /// Interaction logic for StudentDesk.xaml
-    /// </summary>
-    public partial class StudentDesk : Window
+    public StudentDesk()
     {
-        public StudentDesk()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void email_Click(object sender, RoutedEventArgs e)
-        {
-            Email eemail = new Email();
-            eemail.Show();
+    private void email_Click(object sender, RoutedEventArgs e)
+    {
+        Email eemail = new Email();
+        eemail.Show();
 
-        }
+    }
+
+    private void Lesson_Selction_Click(object sender, RoutedEventArgs e)
+    {
+        StudentLessonSelection studentLessonSelection = new StudentLessonSelection();
+        studentLessonSelection.Show();
     }
 }

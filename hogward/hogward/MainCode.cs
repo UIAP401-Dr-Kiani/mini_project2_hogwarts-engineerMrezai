@@ -1,7 +1,11 @@
 ﻿using hogward;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Windows.Documents;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 class Program
 {
@@ -22,6 +26,11 @@ class Program
     public static Student[] StudentDetecter()
     {
         return JsonConvert.DeserializeObject<Student[]>(File.ReadAllText("Students.json"));
+    }
+    //lessonDetecter
+    public static Lesson[] LessonDetecter()
+    {
+        return JsonConvert.DeserializeObject<Lesson[]>(File.ReadAllText("Lessons.json"));
     }
 
 
@@ -76,19 +85,19 @@ class Program
             Lesson1.Name = lessons1[0];
             Lesson1.Time[0] = lessons1[1];
             Lesson1.Time[1] = lessons1[2];
-            profesors[i].lessens.Add(Lesson1);
+            profesors[i].lessens[0] = Lesson1;
 
             Lesson Lesson2 = new Lesson();
             Lesson2.Name = lessons2[0];
             Lesson2.Time[0] = lessons2[1];
             Lesson2.Time[1] = lessons2[2];
-            profesors[i].lessens.Add(Lesson2);
+            profesors[i].lessens[1] = (Lesson2);
 
             Lesson Lesson3 = new Lesson();
             Lesson3.Name = lessons3[0];
             Lesson3.Time[0] = lessons3[1];
             Lesson3.Time[1] = lessons3[2];
-            profesors[i].lessens.Add(Lesson3);
+            profesors[i].lessens[2] = (Lesson3);
 
 
             File.WriteAllText("Professors.json", JsonConvert.SerializeObject(profesors));
@@ -108,20 +117,70 @@ class Program
 
 
 
+    //userfounder
+    public static string[] UserFounder(string username, string password)
+    {
+        string count = "-1";
+        string[] text = new string[3];
+        var students = Program.StudentDetecter();
+        string[] userindex = File.ReadAllText("UserIndex.txt").Split(" ");
+        for (int i = 0; i < students.Length; i++)
+        {
+            if (students[i].Username == userindex[0] && students[i].Password == userindex[1])
+            {
+                text[0] = students[i].Name;
+                text[1] = students[i].Family;
+                text[2] = Convert.ToString(i);
+                break;
+            }
+        }
+        return text;
+    }
 
 
 
 
 
 
-
-
-    //UserfounderWriter
+    //UserrWriter
     public static void Writer(string username, string password)
     {
         using (var writer = new StreamWriter("UserIndex.txt"))
         {
             writer.Write(username + " " + password);
         }
+    }
+
+
+
+    //professor finder for StudentLessonSelction
+    public static List<string> AllowProfesorLesson(string name)
+    {
+        var professors = ProfessorDetecter();
+        List<string> AllowProfessor = new List<string>();
+        for (int i = 0; i < professors.Length; i++)
+        {
+            if (professors[i].lessens[0] == null)
+            {
+                continue;
+            }
+            else if (professors[i].lessens[0].Name == name)
+            {
+                string lesson = professors[i].Name + " " + professors[i].Family + " " + professors[i].lessens[0].Time[0] + " " + professors[i].lessens[0].Time[1];
+                AllowProfessor.Add(lesson);
+            }
+            else if (professors[i].lessens[1].Name == name)
+            {
+                string lesson = professors[i].Name + " " + professors[i].Family + " " + professors[i].lessens[1].Time[0] + " " + professors[i].lessens[1].Time[1];
+                AllowProfessor.Add(lesson);
+            }
+            else if (professors[i].lessens[2].Name == name)
+            {
+                string lesson = professors[i].Name + " " + professors[i].Family + " " + professors[i].lessens[2].Time[0] + " " + professors[i].lessens[2].Time[1];
+                AllowProfessor.Add(lesson);
+            }
+
+        }
+        return AllowProfessor;
     }
 }

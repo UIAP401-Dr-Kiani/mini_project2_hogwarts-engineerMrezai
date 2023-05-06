@@ -2,8 +2,7 @@
 
 public class Student : AuthorizePersons
 {
-    protected string? PassedUnits { get; set; }
-    protected string? Term { get; set; }
-    protected string? HostelNumber { get; set; }
-   
+    public string[] PassedUnits { get; set; }
+    public int Term { get; set; } = 1;
+    public string HostelNumber { get; set; }
 }

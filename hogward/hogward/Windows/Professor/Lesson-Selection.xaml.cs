@@ -23,19 +23,18 @@ namespace hogward.Windows.Professor
         int count = -1;
         public Lesson_Selection()
         {
-            
+            InitializeComponent();
             var professors = Program.ProfessorDetecter();
             string[] Person = File.ReadAllText("UserIndex.txt").Split(" ");
-            for (int i = 0;i< professors.Length;i++)
+            for (int i = 0; i < professors.Length; i++)
             {
                 if (professors[i].Username == Person[0] && professors[i].Password == (Person[1]))
                 {
+                    ID.Text = professors[i].Name + " " + professors[i].Family;
                     count = i;
                     break;
                 }
             }
-            InitializeComponent();
-            ID.Text = professors[count].Name + " " + professors[count].Family;
         }
 
         private void Select_Click(object sender, RoutedEventArgs e)

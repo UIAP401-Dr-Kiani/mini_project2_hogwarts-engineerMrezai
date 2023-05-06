@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\Kiani Git\hogward\hogward\hogward\App.xaml
-8-1287770727
+9-1008972043
 
-221262582537
+2333536511
 208-288960001
-MainWindow.xaml;Windows\Dumbledore\DumbledoreMassageSender.xaml;Windows\Dumbledore\DumbledoreWorkDesk.xaml;Windows\Error\Error page.xaml;Windows\Professor\Lesson-Selection.xaml;Windows\Professor\ProfessorDesk.xaml;Windows\Student\StudentDesk.xaml;Windows\Student\TicketEmail.xaml;
+MainWindow.xaml;Windows\Dumbledore\DumbledoreMassageSender.xaml;Windows\Dumbledore\DumbledoreWorkDesk.xaml;Windows\Error\Error page.xaml;Windows\Professor\Lesson-Selection.xaml;Windows\Professor\ProfessorDesk.xaml;Windows\Student\StudentDesk.xaml;Windows\Student\StudentLessonSelection.xaml;Windows\Student\TicketEmail.xaml;
 
 True
 

@@ -8,5 +8,6 @@
         Title="StudentDesk" Height="150" Width="215" ResizeMode="CanMinimize">
     <Grid>
         <Button Content="Email" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" x:Name="email" Click="email_Click" Height="20" Width="180" />
+        <Button Content="Lesson selection" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="Lesson_Selction" Click="Lesson_Selction_Click" Height="20" Width="180" />
     </Grid>
 </Window>

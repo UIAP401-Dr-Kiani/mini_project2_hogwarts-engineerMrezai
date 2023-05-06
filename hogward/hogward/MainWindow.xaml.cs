@@ -13,8 +13,6 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
-            var professors = Program.ProfessorDetecter();
-            File.WriteAllText("JSON_DATA.json", JsonConvert.SerializeObject(professors));
         }
 
         private void Students_OnClick(object sender, RoutedEventArgs e)

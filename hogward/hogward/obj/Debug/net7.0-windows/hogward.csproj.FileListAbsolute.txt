@@ -72,3 +72,7 @@ D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.Cor
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.csproj.CopyComplete
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.genruntimeconfig.cache
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\ref\hogward.dll
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Lessons.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Lessons.baml
