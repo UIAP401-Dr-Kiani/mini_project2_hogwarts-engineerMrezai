@@ -13,15 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace hogward.Windows.Student
 {
-    /// <summary>
-    /// Interaction logic for StudentLessonSelection.xaml
-    /// </summary>
+
     public partial class StudentLessonSelection : Window
     {
-
         public StudentLessonSelection()
         {
             InitializeComponent();
@@ -32,7 +30,6 @@ namespace hogward.Windows.Student
             int count = Convert.ToInt32(resualt[2]);
             AllowClass(studetns[count].Term);
         }
-
         public void AllowClass(int term)
         {
             var lessons = Program.LessonDetecter();
@@ -83,43 +80,52 @@ namespace hogward.Windows.Student
                 }
             }
         }
-
         private void Select_Click(object sender, RoutedEventArgs e)
         {
             string[] resualt = Program.UserFounder();
             var studetns = Program.StudentDetecter();
             if (Chemistry.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "Chemistry" + " " + Chemistry.Text + "-";
+                studetns[Convert.ToInt16(resualt[2])].plant[0] = "Chemistry" + " " + Chemistry.Text + "-";
             }
             if (BotanicalOne.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalOne" + " " + BotanicalOne.Text + "-";
+
+                studetns[Convert.ToInt16(resualt[2])].plant[1] = "BotanicalOne" + " " + BotanicalOne.Text + "-";
             }
             if (BotanicalTwo.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalTwo" + " " + BotanicalTwo.Text + "-";
+
+                studetns[Convert.ToInt16(resualt[2])].plant[2] = "BotanicalTwo" + " " + BotanicalTwo.Text + "-";
             }
             if (BotanicalThree.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalThree" + " " + BotanicalThree.Text + "-";
+                studetns[Convert.ToInt16(resualt[2])].plant[3] = "BotanicalThree" + " " + BotanicalThree.Text + "-";
             }
             if(BotanicalFour.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "BotanicalFour" + " " + BotanicalFour.Text + "-";
+                studetns[Convert.ToInt16(resualt[2])].plant[4] = "BotanicalFour" + " " + BotanicalFour.Text + "-";
             }
             if(Occultism.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "Occultism" + " " + Occultism.Text + "-";
+                studetns[Convert.ToInt16(resualt[2])].plant[5] = "Occultism" + " " + Occultism.Text + "-";
             }
             if(Sport.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "Sport" + " " + Sport.Text + "-";
+                studetns[Convert.ToInt16(resualt[2])].plant[6] = "Sport" + " " + Sport.Text + "-";
             }
             if(Plant.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].plant += "Plant" + " " + Plant.Text + "-";
+                studetns[Convert.ToInt16(resualt[2])].plant[7] = "Plant" + " " + Plant.Text + "-";
             }
+            File.WriteAllText("Students.json", JsonConvert.SerializeObject(studetns));
+            using (var writer = new StreamWriter("Error.txt"))
+            {
+                writer.Write("Lessons seleced sucssefully");
+            }
+            Error_page error_Page = new Error_page();
+            error_Page.Show();
+            this.Close();
         }
     }
 }

@@ -9,9 +9,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 class Program
 {
-
-    public static int index { get; set; }
-
     //AuthorizePersonsDetecter
     public static AuthorizePersons[] AuthorizePersonsDetecter()
     {
@@ -32,17 +29,6 @@ class Program
     {
         return JsonConvert.DeserializeObject<Lesson[]>(File.ReadAllText("Lessons.json"));
     }
-
-
-
-
-
-
-
-
-
-
-
     //login page
     public static int LoginCheck(string Type, string UserName, string Password)
     {
@@ -60,18 +46,6 @@ class Program
         }
         throw new System.Exception();
     }
-
-
-
-
-
-
-
-
-
-
-
-
     //Professor Class selector and Writer
     public static void ProfessorSelector(string lesson1, string lesson2, string lesson3, int i)
     {
@@ -112,11 +86,6 @@ class Program
             throw new Exception();
         }
     }
-
-
-
-
-
     //userfounder
     public static string[] UserFounder()
     {
@@ -136,12 +105,6 @@ class Program
         }
         return text;
     }
-
-
-
-
-
-
     //UserrWriter
     public static void Writer(string username, string password)
     {
@@ -150,14 +113,11 @@ class Program
             writer.Write(username + " " + password);
         }
     }
-
-
-
     //professor finder for StudentLessonSelction
     public static List<string> AllowProfesorLesson(string name)
     {
         var professors = ProfessorDetecter();
-        List<string> AllowProfessor = new List<string>();
+        List<string> AllowProfessor = new();
         for (int i = 0; i < professors.Length; i++)
         {
             if (professors[i].lessens[0] == null)

@@ -1,4 +1,5 @@
-﻿using hogward.Windows.Professor;
+﻿using hogward.Classes;
+using hogward.Windows.Professor;
 using hogward.Windows.Student;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ public partial class StudentDesk : Window
     public StudentDesk()
     {
         InitializeComponent();
+        TrainTime.Text = train.Train();
     }
 
     private void email_Click(object sender, RoutedEventArgs e)
@@ -37,5 +39,10 @@ public partial class StudentDesk : Window
     {
         StudentLessonSelection studentLessonSelection = new StudentLessonSelection();
         studentLessonSelection.Show();
+    }
+
+    private void Train_Click(object sender, RoutedEventArgs e)
+    {
+        
     }
 }
