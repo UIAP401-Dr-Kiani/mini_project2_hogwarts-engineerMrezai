@@ -10,7 +10,8 @@
         <Button Content="Email" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" x:Name="email" Click="email_Click" Height="20" Width="180" />
         <Button Content="Lesson selection" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="Lesson_Selction" Click="Lesson_Selction_Click" Height="20" Width="180" />
         <Button Content="attendance on the train" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="95,70,0,0" x:Name="Train" Click="Train_Click" Height="20" Width="86" />
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-95,70,0,0" x:Name="TrainTime" Height="20" Width="85" TextAlignment="Center" FontSize="8"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-95,70,0,0" x:Name="TrainTime" Height="20" Width="85" TextAlignment="Center" FontSize="9"/>
         <Border BorderBrush="Black" BorderThickness="1,1,1,1" Margin="-95,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="20" Width="85"/>
     </Grid>
+    
 </Window>

@@ -1,6 +1,7 @@
 ﻿using hogward.Classes;
 using hogward.Windows.Professor;
 using hogward.Windows.Student;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,25 +15,30 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace hogward.Windows;
 
-/// <summary>
-/// Interaction logic for StudentDesk.xaml
-/// </summary>
+
 public partial class StudentDesk : Window
 {
+
+    string[] TTrain = train.Train();
     public StudentDesk()
     {
         InitializeComponent();
-        TrainTime.Text = train.Train();
+        
+        TrainTime.Text = TTrain[0]; 
+        if (TrainTime.Text == "Next Tomarow 8:00")
+        {
+            Train.IsEnabled = false;
+        }
     }
 
     private void email_Click(object sender, RoutedEventArgs e)
     {
         Email eemail = new Email();
         eemail.Show();
-
     }
 
     private void Lesson_Selction_Click(object sender, RoutedEventArgs e)
@@ -43,6 +49,13 @@ public partial class StudentDesk : Window
 
     private void Train_Click(object sender, RoutedEventArgs e)
     {
-        
+        var students = Program.StudentDetecter();
+        var index = Program.UserFounder();
+        students[Convert.ToInt16(index[2])].IsInHogward = true;
+        students[Convert.ToInt16(index[2])].TrainNum = Convert.ToInt16(TTrain[1]);
+        File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
+        File.WriteAllText("Error.txt", "You have successfully boarded the train");
+        Error_page error_Page = new Error_page();
+        error_Page.Show();
     }
 }

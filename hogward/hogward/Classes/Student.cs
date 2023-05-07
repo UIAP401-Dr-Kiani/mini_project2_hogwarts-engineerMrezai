@@ -7,4 +7,5 @@ public class Student : AuthorizePersons
     public int Term { get; set; } = 1;
     public string HostelNumber { get; set; }
     public bool IsInHogward { get; set; } = false;
+    public int TrainNum;
 }

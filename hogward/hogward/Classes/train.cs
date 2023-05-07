@@ -9,11 +9,13 @@ namespace hogward.Classes
 {
     public class train
     {
-        public static string Train()
+        public static string[] Train()
         {
-            int min = 5*60;
-            int[,] DepartureTime = new int[4,2];
-            DepartureTime[0,0] = 08;
+            string[] result = new string[2];
+            int min = 5 * 60;
+            int count = -1;
+            int[,] DepartureTime = new int[4, 2];
+            DepartureTime[0, 0] = 08;
             DepartureTime[0, 1] = 00;
             DepartureTime[1, 0] = 12;
             DepartureTime[1, 1] = 00;
@@ -22,15 +24,17 @@ namespace hogward.Classes
             DepartureTime[3, 0] = 20;
             DepartureTime[3, 1] = 00;
             DateTime dt = DateTime.Now;
-            int  TimeHour =Convert.ToInt16(dt.ToString("HH"));
+            int TimeHour = Convert.ToInt16(dt.ToString("HH"));
             int TimeMin = Convert.ToInt16(dt.ToString("mm"));
             int RHour = 0, RMin = 0;
-            for (int i = 0;i<4;i++)
+            for (int i = 0; i < 4; i++)
             {
-                if (TimeHour*60 + TimeMin > 20*60)
+                if (TimeHour * 60 + TimeMin > 20 * 60)
                 {
-                    return "Next Tomarow 8:00";
-                    
+                    result[0] = "Next Tomarow 8:00";
+                    result[1] = "-1";
+                    return result;
+
                 }
                 if (DepartureTime[i, 0] > TimeHour)
                 {
@@ -46,12 +50,15 @@ namespace hogward.Classes
                 }
                 else
                     continue;
-                if (RMin + RHour*60 <min)
+                if (RMin + RHour * 60 < min)
                 {
                     min = RMin + RHour * 60;
+                    count = i;
                 }
             }
-            return Convert.ToString(min) + " Left to train start to move";
+            result[0] = Convert.ToString(min);
+            result[1] = Convert.ToString(count);
+            return result;
         }
     }
 }
