@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 
 namespace hogward.Classes
@@ -59,6 +60,62 @@ namespace hogward.Classes
             result[0] = Convert.ToString(min);
             result[1] = Convert.ToString(count);
             return result;
+        }
+
+
+        public static void TravelTrain()
+        {
+            var students = Program.StudentDetecter();
+            int Hour = Convert.ToInt16(DateTime.Now.ToString("HH")) * 60;
+            int Min = Convert.ToInt16(DateTime.Now.ToString("mm"));
+            for (int i = 0; i < students.Length; i++)
+            {
+                if (students[i].TrainNum == 0 && Hour + Min >=8*60)
+                {
+                    students[i].TrainNum = -1;
+                    students[i].IsInHogward = true;
+                    File.WriteAllText("Error.txt", "Wellcome to the Hogward");
+                }
+                else if (students[i].TrainNum == 1 && Hour + Min >= 12*60)
+                {
+                    students[i].TrainNum = -1;
+                    students[i].IsInHogward = true;
+                    File.WriteAllText("Error.txt", "Wellcome to the Hogward");
+                }
+                else if (students[i].TrainNum ==2 && Hour + Min >=16*60)
+                {
+                    students[i].TrainNum = -1;
+                    students[i].IsInHogward = true;
+                    File.WriteAllText("Error.txt", "Wellcome to the Hogward");
+                }
+                else if (students[i].TrainNum == 3 && Hour + Min >=20*60)
+                {
+                    students[i].TrainNum = -1;
+                    students[i].IsInHogward = true;
+                    File.WriteAllText("Error.txt", "Wellcome to the Hogward");
+                }
+            }
+            
+        }
+
+        public static int TrainCheack()
+        {
+            int count = 0;
+            string[] index = File.ReadAllText("UserIndex.txt").Split(" ");
+            var students = Program.StudentDetecter();
+            for(int i = 0; i< students.Length;i++)
+            {
+                if (students[i].Username == index[0] && students[i].Password == index[1])
+                {
+                    if (students[i].IsInHogward == true)
+                    {
+                        return 0;
+                    }
+                    else
+                        return 1;
+                }
+            }
+            return -1;
         }
     }
 }

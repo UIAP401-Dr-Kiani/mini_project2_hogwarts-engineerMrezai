@@ -60,18 +60,25 @@ class Program
             Lesson1.Time[0] = lessons1[1];
             Lesson1.Time[1] = lessons1[2];
             profesors[i].lessens[0] = Lesson1;
+            Lesson1.Teacher[0] = profesors[i].Name;
+            Lesson1.Teacher[1] = profesors[i].Family;
+
 
             Lesson Lesson2 = new Lesson();
             Lesson2.Name = lessons2[0];
             Lesson2.Time[0] = lessons2[1];
             Lesson2.Time[1] = lessons2[2];
             profesors[i].lessens[1] = (Lesson2);
+            Lesson2.Teacher[0] = profesors[i].Name;
+            Lesson2.Teacher[1] = profesors[i].Family;
 
             Lesson Lesson3 = new Lesson();
             Lesson3.Name = lessons3[0];
             Lesson3.Time[0] = lessons3[1];
             Lesson3.Time[1] = lessons3[2];
             profesors[i].lessens[2] = (Lesson3);
+            Lesson3.Teacher[0] = profesors[i].Name;
+            Lesson3.Teacher[1] = profesors[i].Family;
 
 
             File.WriteAllText("Professors.json", JsonConvert.SerializeObject(profesors));

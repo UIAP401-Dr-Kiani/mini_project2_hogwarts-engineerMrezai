@@ -27,12 +27,22 @@ public partial class StudentDesk : Window
     public StudentDesk()
     {
         InitializeComponent();
-        
-        TrainTime.Text = TTrain[0]; 
-        if (TrainTime.Text == "Next Tomarow 8:00")
+        train.TravelTrain();
+        int status = train.TrainCheack();
+        if (status == 0)
         {
             Train.IsEnabled = false;
         }
+        else
+        {
+            Train.IsEnabled = true;
+            TrainTime.Text = (Convert.ToInt16(TTrain[0]) / 60) + ":" + (Convert.ToInt16(TTrain[0]) % 60);
+            if (TrainTime.Text == "Next Tomarow 8:00")
+            {
+                Train.IsEnabled = false;
+            }
+        }
+        
     }
 
     private void email_Click(object sender, RoutedEventArgs e)
@@ -51,7 +61,6 @@ public partial class StudentDesk : Window
     {
         var students = Program.StudentDetecter();
         var index = Program.UserFounder();
-        students[Convert.ToInt16(index[2])].IsInHogward = true;
         students[Convert.ToInt16(index[2])].TrainNum = Convert.ToInt16(TTrain[1]);
         File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
         File.WriteAllText("Error.txt", "You have successfully boarded the train");

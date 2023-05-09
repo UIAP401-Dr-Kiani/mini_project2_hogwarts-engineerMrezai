@@ -1,4 +1,5 @@
-﻿using hogward.Windows;
+﻿using hogward.Classes;
+using hogward.Windows;
 using hogward.Windows.Professor;
 using Newtonsoft.Json;
 using System.Collections.Generic;

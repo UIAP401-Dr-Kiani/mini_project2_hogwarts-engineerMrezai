@@ -84,6 +84,7 @@ namespace hogward.Windows.Student
         {
             string[] resualt = Program.UserFounder();
             var studetns = Program.StudentDetecter();
+            studetns[Convert.ToInt16(resualt[2])].plant = new string[2];
             if (Chemistry.IsEnabled == true)
             {
                 studetns[Convert.ToInt16(resualt[2])].plant[0] = "Chemistry" + " " + Chemistry.Text + "-";

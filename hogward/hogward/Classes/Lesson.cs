@@ -6,6 +6,7 @@ using System.Web;
 
 public class Lesson
 {
+    public string[] Teacher { get; set; } = new string[2];
     public string[] Time { get; set; } = new string[2];
     public int NumberOfStudents { get; set; }
     public int Capacity = 50;
