@@ -1,10 +1,12 @@
 ﻿using hogward;
+using hogward.Windows;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Documents;
 using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 class Program
@@ -149,5 +151,63 @@ class Program
 
         }
         return AllowProfessor;
+    }
+    //Professor lesson finder
+    public static List<string> ProfessorLessonFinder()
+    {
+        List<string> LESSONS = new List<string>();
+        Error_page error_Page = new Error_page();
+        var professors = ProfessorDetecter();
+        var index = File.ReadAllText("UserIndex.txt").Split(" ");
+        for (int i = 0;i<professors.Length;i++)
+        {
+            if (professors[i].Username == index[0] && professors[i].Password == index[1])
+            {
+                if (professors[i].lessens[0] != null)
+                {
+                    for(int j = 0; j < professors[i].lessens.Length;j++)
+                    {
+                        LESSONS.Add(professors[i].lessens[j].Name + " " + professors[i].lessens[j].Time[0] + " " + professors[i].lessens[j].Time[1]);
+                    }
+                    return LESSONS;
+                }
+            }
+        }
+        File.WriteAllText("Error.txt", "You have not selected any course");
+        error_Page.Show();
+        return null;
+    }
+    //HomeWork Writer For Teacher
+    public static void ProfessorHomeWorkWriter(string DeadLine, string Lesson, string Title , int Point)
+    {
+        var professors = ProfessorDetecter();
+        var index = File.ReadAllText("UserIndex.txt").Split(" ");
+        
+        for (int i = 0; i < professors.Length; i++)
+        {
+            if (professors[i].Username == index[0] && professors[i].Password == index[1])
+            {
+                for (int j = 0; j < professors[i].lessens.Length;j++)
+                {
+                    
+
+                    if ((professors[i].lessens[j].Name + " " + professors[i].lessens[j].Time[0] + " " + professors[i].lessens[j].Time[1]) == Lesson)
+                    {
+                        professors[i].lessens[j].homework = new();
+                        professors[i].lessens[j].homework.Title = Title;
+                        professors[i].lessens[j].homework.DeadLine = DeadLine;
+                        professors[i].lessens[j].homework.Point = Point;
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+        File.WriteAllText("Professors.json", JsonConvert.SerializeObject(professors));
+
+        File.WriteAllText("Error.txt", "HomeWork added sucsessfully");
+
+        Error_page error_Page = new Error_page();
+        error_Page.Show();
     }
 }

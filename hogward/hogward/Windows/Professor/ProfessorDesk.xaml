@@ -8,5 +8,6 @@
         Title="ProfessorDesk" Height="150" Width="215" ResizeMode="CanMinimize">
     <Grid>
         <Button Content="Lesson Selection" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" x:Name="LessonSelction" Click="LessonSelction_Click" Height="20" Width="180" />
+        <Button Content="HomeWork" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,40,0,0" x:Name="HomeWork" Click="HomeWork_Click" Height="20" Width="180"/>
     </Grid>
 </Window>

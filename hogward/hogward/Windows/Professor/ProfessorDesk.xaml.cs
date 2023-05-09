@@ -26,5 +26,11 @@ namespace hogward.Windows.Professor
             Lesson_Selection lesson_Selection = new Lesson_Selection();
             lesson_Selection.Show();
         }
+
+        private void HomeWork_Click(object sender, RoutedEventArgs e)
+        {
+            ProfessorHomeWork professorHomeWork = new ProfessorHomeWork();
+            professorHomeWork.Show();
+        }
     }
 }

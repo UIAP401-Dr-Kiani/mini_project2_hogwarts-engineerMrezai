@@ -74,3 +74,5 @@ D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.genruntime
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\ref\hogward.dll
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorHomeWork.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorHomeWork.baml
