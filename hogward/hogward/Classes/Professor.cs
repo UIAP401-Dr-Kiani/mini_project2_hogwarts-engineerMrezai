@@ -6,6 +6,5 @@ namespace hogward;
 
 public class Professor : AuthorizePersons
 {
-    public Lesson[] lessens { get; set; }
     public bool SimultaneousTeaching { get; set; }
 }

@@ -46,7 +46,7 @@ class Program
                 }
             }
         }
-        throw new System.Exception();
+        return -1;
     }
     //Professor Class selector and Writer
     public static void ProfessorSelector(string lesson1, string lesson2, string lesson3, int i)

@@ -36,10 +36,14 @@ public partial class StudentDesk : Window
         else
         {
             Train.IsEnabled = true;
-            TrainTime.Text = (Convert.ToInt16(TTrain[0]) / 60) + ":" + (Convert.ToInt16(TTrain[0]) % 60);
-            if (TrainTime.Text == "Next Tomarow 8:00")
+            if (TTrain[0] == "Next Tomarow 8:00")
             {
+                TrainTime.Text = "Next Tomarow 8:00";
                 Train.IsEnabled = false;
+            }
+            else
+            {
+                TrainTime.Text = (Convert.ToInt16(TTrain[0]) / 60) + ":" + (Convert.ToInt16(TTrain[0]) % 60);
             }
         }
         
