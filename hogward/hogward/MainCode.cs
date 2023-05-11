@@ -209,5 +209,78 @@ class Program
 
         Error_page error_Page = new Error_page();
         error_Page.Show();
+    }\
+    //HomeWork Finder For Student
+    public static void StudentHomeWorkSeter()
+    {
+        int count = -1;
+        List<string> Lessons = new List<string>();
+        var index = File.ReadAllText("UserIndex.txt").Split(" ");
+        var students = StudentDetecter();
+        for (int i = 0; i < students.Length; i++)
+        {
+            if (students[i].Username == index[0] && students[i].Password == index[1])
+            {
+                count = i; break;
+            }
+        }
+        var professors = ProfessorDetecter();
+        for (int i = 0; i < professors.Length; i++)
+        {
+            for (int j = 0; j < professors[i].lessens.Length; j++)
+            {
+                if (professors[i].lessens[j] == null)
+                    continue;
+                else if (professors[i].lessens[j].Name == students[count].lessens[0].Name && students[count].lessens[0].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[0].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[0].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[0].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[0].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[1].Name && students[count].lessens[1].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[1].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[1].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[1].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[1].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[2].Name && students[count].lessens[2].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[2].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[2].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[2].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[2].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[3].Name && students[count].lessens[3].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[3].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[3].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[3].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[3].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[4].Name && students[count].lessens[4].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[4].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[4].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[4].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[4].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[5].Name && students[count].lessens[5].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[5].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[5].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[5].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[5].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[6].Name && students[count].lessens[6].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[6].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[6].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[6].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[6].homework = professors[i].lessens[j].homework;
+                }
+                else if (professors[i].lessens[j].Name == students[count].lessens[7].Name && students[count].lessens[7].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[7].Teacher[0] == professors[i].lessens[j].Teacher[0] && students[count].lessens[7].Time[0] == professors[i].lessens[j].Time[0] && students[count].lessens[7].Time[1] == professors[i].lessens[j].Time[1])
+                {
+                    students[count].lessens[7].homework = professors[i].lessens[j].homework;
+                }
+            }
+        }
+        File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
+    }
+    //student Lesson name returner
+    public static List<string> StudentLessonReturner()
+    {
+        var students = StudentDetecter();
+        string Lesson;
+        string[] index = UserFounder();
+        List<string> LESSONS = new List<string>();
+        for (int i = 0; i < students[Convert.ToInt16(index[2])].lessens.Length; i++)
+        {
+            if (students[Convert.ToInt16(index[2])].lessens[i].Teacher[0] == null)
+                continue;
+            Lesson = students[Convert.ToInt16(index[2])].lessens[i].Name + " " + students[Convert.ToInt16(index[2])].lessens[i].Teacher[0] + " " + students[Convert.ToInt16(index[2])].lessens[i].Teacher[1];
+            LESSONS.Add(Lesson);
+        }
+        return LESSONS;
     }
 }
