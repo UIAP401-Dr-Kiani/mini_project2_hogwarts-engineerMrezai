@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hogward.Windows.Student"
         mc:Ignorable="d"
-        Title="StudentHomeWork" Height="215" Width="215">
+        Title="StudentHomeWork" Height="215" Width="453" AllowDrop="True">
     <Grid>
         <Border Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black" Height="25" Width="180"/>
         <TextBlock x:Name="DeadLine" Height="25" Width="180" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -14,5 +14,6 @@
         <Button Width="85" Height="20" Margin="10,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="Send" Click="Send_Click" Content="Send"/>
         <Border Width="85" Height="20" Margin="105,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
         <TextBlock Width="85" Height="20" Margin="105,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" x:Name="Point" Text="Point"/>
+        <TextBox x:Name="ANS" Margin="210,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="160" Width="200" Text="Answer" />
     </Grid>
 </Window>

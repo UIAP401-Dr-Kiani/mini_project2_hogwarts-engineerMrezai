@@ -16,9 +16,6 @@ using System.Windows.Automation.Peers;
 
 namespace hogward.Windows.Student
 {
-    /// <summary>
-    /// Interaction logic for Chart.xaml
-    /// </summary>
     public partial class Chart : Window
     {
         public Chart()
