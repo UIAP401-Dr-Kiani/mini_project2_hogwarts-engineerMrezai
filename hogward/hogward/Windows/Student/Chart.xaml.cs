@@ -26,7 +26,7 @@ namespace hogward.Windows.Student
         public void ChartEnabler()
         {
             var students = Program.StudentDetecter();
-            var detail = Program.UserFounder();
+            var detail = Program.UserFounder("student");
             int index = Convert.ToInt32(detail[2]);
             for( int i = 0; i < students[index].lessens.Length; i++ )
             {

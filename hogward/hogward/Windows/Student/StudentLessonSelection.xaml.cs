@@ -24,7 +24,7 @@ namespace hogward.Windows.Student
             InitializeComponent();
 
             var studetns = Program.StudentDetecter();
-            string[] resualt = Program.UserFounder();
+            string[] resualt = Program.UserFounder("student");
             StudentLessonsSelection.Title = resualt[0] + " " + resualt[1];
             int count = Convert.ToInt32(resualt[2]);
             AllowClass(studetns[count].Term);
@@ -81,7 +81,7 @@ namespace hogward.Windows.Student
         }
         private void Select_Click(object sender, RoutedEventArgs e)
         {
-            string[] resualt = Program.UserFounder();
+            string[] resualt = Program.UserFounder("student");
             var studetns = Program.StudentDetecter();
             studetns[Convert.ToInt16(resualt[2])].lessens = new Lesson[8];
             studetns[Convert.ToInt16(resualt[2])].plant = new string[2];
@@ -94,6 +94,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[0].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[0].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[0].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[0].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
             if (BotanicalOne.IsEnabled == true)
             {
@@ -104,6 +105,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[1].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[1].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[1].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[1].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
             if (BotanicalTwo.IsEnabled == true)
             {
@@ -114,6 +116,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[2].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[2].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[2].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[2].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
             if (BotanicalThree.IsEnabled == true)
             {
@@ -124,6 +127,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[3].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[3].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[3].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[3].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
             if(BotanicalFour.IsEnabled == true)
             {
@@ -134,6 +138,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[4].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[4].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[4].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[4].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
             if(Occultism.IsEnabled == true)
             {
@@ -144,6 +149,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[5].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[5].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[5].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[5].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
             if(Sport.IsEnabled == true)
             {
@@ -154,6 +160,7 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[6].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[6].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[6].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[6].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
 
             }
             if(Plant.IsEnabled == true)
@@ -165,7 +172,9 @@ namespace hogward.Windows.Student
                 studetns[Convert.ToInt16(resualt[2])].lessens[7].Teacher[1] = Input[1];
                 studetns[Convert.ToInt16(resualt[2])].lessens[7].Time[0] = Input[2];
                 studetns[Convert.ToInt16(resualt[2])].lessens[7].Time[1] = Input[3];
+                studetns[Convert.ToInt16(resualt[2])].lessens[7].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
             }
+            
             File.WriteAllText("Students.json", JsonConvert.SerializeObject(studetns));
             using (var writer = new StreamWriter("Error.txt"))
             {

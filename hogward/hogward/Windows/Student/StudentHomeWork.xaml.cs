@@ -30,7 +30,7 @@ namespace hogward.Windows.Student
         public void HomeWorkSeter()
         {
             var students = Program.StudentDetecter();
-            var detail = Program.UserFounder();
+            var detail = Program.UserFounder("student");
             int index = Convert.ToInt32(detail[2]);
             string Lesson = File.ReadAllText("LessonForHomeWork.txt").Split("-")[0];
             for(int i = 0; i < students[index].lessens.Length;i++)
@@ -53,7 +53,7 @@ namespace hogward.Windows.Student
         private void Send_Click(object sender, RoutedEventArgs e)
         {
             var students = Program.StudentDetecter();
-            var detail = Program.UserFounder();
+            var detail = Program.UserFounder("student");
             int index = Convert.ToInt32(detail[2]);
             string Lesson = File.ReadAllText("LessonForHomeWork.txt").Split("-")[0];
             for (int i = 0; i < students[index].lessens.Length; i++)
@@ -67,15 +67,16 @@ namespace hogward.Windows.Student
                     else
                     {
                         students[index].lessens[i].homework.Ans = ANS.Text;
+                        File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
+                        File.WriteAllText("Error.txt", "HomeWork Sended Sucssesfully");
+                        Error_page error_Page = new Error_page();
+                        error_Page.Show();
+                        this.Close();
                     }
 
                 }
             }
-            File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
-            File.WriteAllText("Error.txt", "HomeWork Sended Sucssesfully");
-            Error_page error_Page = new Error_page();
-            error_Page.Show();
-            this.Close();
+          
         }
     }
 }

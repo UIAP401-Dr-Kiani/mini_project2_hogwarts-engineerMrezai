@@ -65,7 +65,7 @@ public partial class StudentDesk : Window
     private void Train_Click(object sender, RoutedEventArgs e)
     {
         var students = Program.StudentDetecter();
-        var index = Program.UserFounder();
+        var index = Program.UserFounder("student");
         students[Convert.ToInt16(index[2])].TrainNum = Convert.ToInt16(TTrain[1]);
         File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
         File.WriteAllText("Error.txt", "You have successfully boarded the train");

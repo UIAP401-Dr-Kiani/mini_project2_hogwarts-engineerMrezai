@@ -1,4 +1,5 @@
-﻿using hogward.Classes;
+﻿using hogward;
+using hogward.Classes;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -9,6 +10,7 @@ public class Lesson
 {
     public string[] Teacher { get; set; } = new string[2];
     public string[] Time { get; set; } = new string[2];
+    public List<Student> Students { get; set; } = new List<Student>();
     public int NumberOfStudents { get; set; }
     public int Capacity = 50;
     public int PresentationSemester { get; set; }
