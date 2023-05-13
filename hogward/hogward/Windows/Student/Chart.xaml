@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hogward.Windows.Student"
         mc:Ignorable="d"
-        Title="Chart" Height="450" Width="1045">
+        Title="Chart" Height="310" Width="970">
     <Grid>
         <Border Margin="160,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="140" BorderBrush="Black" BorderThickness="2,2,2,2"/>
         <TextBlock Margin="160,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" Width="140" Text="Saturday" TextAlignment="Center" FontSize="25"/>
@@ -35,26 +35,26 @@
 
 
 
-        <Button x:Name="SA810" HorizontalAlignment="Left" Margin="160,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SU810" HorizontalAlignment="Left" Margin="320,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="M810" HorizontalAlignment="Left" Margin="480,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="T810" HorizontalAlignment="Left" Margin="640,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="W810" HorizontalAlignment="Left" Margin="800,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="W1012" HorizontalAlignment="Left" Margin="800,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="W1416" HorizontalAlignment="Left" Margin="800,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="W1618" HorizontalAlignment="Left" Margin="800,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="T1012" HorizontalAlignment="Left" Margin="640,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="T1416" HorizontalAlignment="Left" Margin="640,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="T1618" HorizontalAlignment="Left" Margin="640,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="M1012" HorizontalAlignment="Left" Margin="480,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="M1416" HorizontalAlignment="Left" Margin="480,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="M1618" HorizontalAlignment="Left" Margin="480,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SU1012" HorizontalAlignment="Left" Margin="320,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SU1416" HorizontalAlignment="Left" Margin="320,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SU1618" HorizontalAlignment="Left" Margin="320,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SA1012" HorizontalAlignment="Left" Margin="160,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SA1416" HorizontalAlignment="Left" Margin="160,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
-        <Button x:Name="SA1618" HorizontalAlignment="Left" Margin="160,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False"/>
+        <Button x:Name="SA810" HorizontalAlignment="Left" Margin="160,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SU810" HorizontalAlignment="Left" Margin="320,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="M810" HorizontalAlignment="Left" Margin="480,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="T810" HorizontalAlignment="Left" Margin="640,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="W810" HorizontalAlignment="Left" Margin="800,60,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="W1012" HorizontalAlignment="Left" Margin="800,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="W1416" HorizontalAlignment="Left" Margin="800,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="W1618" HorizontalAlignment="Left" Margin="800,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="T1012" HorizontalAlignment="Left" Margin="640,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="T1416" HorizontalAlignment="Left" Margin="640,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="T1618" HorizontalAlignment="Left" Margin="640,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="M1012" HorizontalAlignment="Left" Margin="480,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="M1416" HorizontalAlignment="Left" Margin="480,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="M1618" HorizontalAlignment="Left" Margin="480,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SU1012" HorizontalAlignment="Left" Margin="320,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SU1416" HorizontalAlignment="Left" Margin="320,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SU1618" HorizontalAlignment="Left" Margin="320,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SA1012" HorizontalAlignment="Left" Margin="160,110,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SA1416" HorizontalAlignment="Left" Margin="160,160,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
+        <Button x:Name="SA1618" HorizontalAlignment="Left" Margin="160,210,0,0" VerticalAlignment="Top" Height="40" Width="140" BorderBrush="Black" Foreground="#FF1F1E1E" Background="#FFFFFEFE" IsEnabled="False" Click="HomeWork_Click"/>
 
     </Grid>
 </Window>

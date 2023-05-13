@@ -1,0 +1,18 @@
+﻿<Window x:Class="hogward.Windows.Student.StudentHomeWork"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hogward.Windows.Student"
+        mc:Ignorable="d"
+        Title="StudentHomeWork" Height="215" Width="215">
+    <Grid>
+        <Border Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black" Height="25" Width="180"/>
+        <TextBlock x:Name="DeadLine" Height="25" Width="180" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Border Margin="10,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="96" Width="180" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <TextBlock x:Name="Title" Margin="10,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="96" Width="180"/>
+        <Button Width="85" Height="20" Margin="10,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="Send" Click="Send_Click" Content="Send"/>
+        <Border Width="85" Height="20" Margin="105,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="1,1,1,1" BorderBrush="Black"/>
+        <TextBlock Width="85" Height="20" Margin="105,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" x:Name="Point" Text="Point"/>
+    </Grid>
+</Window>

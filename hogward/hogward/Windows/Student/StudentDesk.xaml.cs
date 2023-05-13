@@ -27,7 +27,8 @@ public partial class StudentDesk : Window
     public StudentDesk()
     {
         InitializeComponent();
-        train.TravelTrain();
+        Task.Factory.StartNew(Program.StudentHomeWorkSeter);
+        Task.Factory.StartNew(train.TravelTrain);
         int status = train.TrainCheack();
         if (status == 0)
         {
@@ -70,5 +71,11 @@ public partial class StudentDesk : Window
         File.WriteAllText("Error.txt", "You have successfully boarded the train");
         Error_page error_Page = new Error_page();
         error_Page.Show();
+    }
+
+    private void Chart_Click(object sender, RoutedEventArgs e)
+    {
+        Chart chart = new Chart();
+        chart.Show();
     }
 }

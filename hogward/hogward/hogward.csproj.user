@@ -22,6 +22,9 @@
     <Compile Update="Windows\Student\Chart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\Student\StudentHomeWork.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\Student\StudentLessonSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Student\Chart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Student\StudentHomeWork.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Student\StudentLessonSelection.xaml">

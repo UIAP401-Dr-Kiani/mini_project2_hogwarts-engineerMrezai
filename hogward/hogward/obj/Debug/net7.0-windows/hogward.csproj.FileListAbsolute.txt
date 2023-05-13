@@ -76,3 +76,7 @@ D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\St
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorHomeWork.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorHomeWork.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Chart.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Chart.baml
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentHomeWork.g.cs
+D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentHomeWork.baml
