@@ -13,12 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using Newtonsoft.Json;
+using hogward.Classes;
 
 namespace hogward.Windows.Student
 {
-    /// <summary>
-    /// Interaction logic for StudentHomeWork.xaml
-    /// </summary>
     public partial class StudentHomeWork : Window
     {
 
@@ -29,23 +27,27 @@ namespace hogward.Windows.Student
         }
         public void HomeWorkSeter()
         {
+            string[] teacher = File.ReadAllText("LessonForHomeWork.txt").Split("-")[1].Split(" ");
             var students = Program.StudentDetecter();
             var detail = Program.UserFounder("student");
+            var lessons = Program.lessonSelectedDetecter();
             int index = Convert.ToInt32(detail[2]);
             string Lesson = File.ReadAllText("LessonForHomeWork.txt").Split("-")[0];
-            for(int i = 0; i < students[index].lessens.Length;i++)
+            for (int i = 0; i < lessons.Length; i++)
             {
-                if (students[index].lessens[i] == null)
-                    continue;
-                if (Lesson == students[index].lessens[i].Name)
+                for (int j = 0; j < lessons[i].Students.Count; j++)
                 {
-                    if (students[index].lessens[i].homework == null)
-                        continue;
-                    Title.Text = students[index].lessens[i].homework.Title;
-                    Point.Text = Convert.ToString(students[index].lessens[i].homework.Point);
-                    DeadLine.Text = students[index].lessens[i].homework.DeadLine;
-                    ANS.Text = students[index].lessens[i].homework.Ans;
-                    break;
+                    if (lessons[i].Teacher[1] == teacher[1] && lessons[i].Teacher[0] == teacher[0] && lessons[i].Name == Lesson && lessons[i].Students[j].Username == students[index].Username && lessons[i].Students[j].Password == students[index].Password)
+                    {
+                        Title.Text = lessons[i].homework.Title;
+                        Point.Text = Convert.ToString(lessons[i].homework.Point);
+                        DeadLine.Text = lessons[i].homework.DeadLine;
+                        if (lessons[i].homework.Ans == null)
+                            break;
+                        int count = lessons[i].homework.Ans.Count;
+                        ANS.Text = lessons[i].homework.Ans[count -1].Answers;
+                        break;
+                    }
                 }
             }
         }
@@ -54,29 +56,31 @@ namespace hogward.Windows.Student
         {
             var students = Program.StudentDetecter();
             var detail = Program.UserFounder("student");
+            var lessons = Program.lessonSelectedDetecter();
             int index = Convert.ToInt32(detail[2]);
             string Lesson = File.ReadAllText("LessonForHomeWork.txt").Split("-")[0];
-            for (int i = 0; i < students[index].lessens.Length; i++)
+            string[] teacher = File.ReadAllText("LessonForHomeWork.txt").Split("-")[1].Split(" ");
+            Answer answer = new();
+            for (int i = 0; i < lessons.Length; i++)
             {
-                if (students[index].lessens[i] == null)
-                    continue;
-                if (Lesson == students[index].lessens[i].Name)
+                for (int j = 0; j < lessons[i].Students.Count; j++)
                 {
-                    if (students[index].lessens[i].homework == null)
-                        continue;
-                    else
+                    if (lessons[i].Teacher[1] == teacher[1] &&lessons[i].Teacher[0] == teacher[0] && lessons[i].Name == Lesson && lessons[i].Students[j].Username == students[index].Username && lessons[i].Students[j].Password == students[index].Password)
                     {
-                        students[index].lessens[i].homework.Ans = ANS.Text;
-                        File.WriteAllText("Students.json", JsonConvert.SerializeObject(students));
+                        answer.Username = students[j].Username;
+                        answer.Password = students[j].Password;
+                        answer.Answers = ANS.Text;
+                        lessons[i].homework.Ans = new();
+                        lessons[i].homework.Ans.Add(answer);
+                        File.WriteAllText("LessonSelected.json", JsonConvert.SerializeObject(lessons));
                         File.WriteAllText("Error.txt", "HomeWork Sended Sucssesfully");
                         Error_page error_Page = new Error_page();
                         error_Page.Show();
                         this.Close();
+                        break;
                     }
-
                 }
             }
-          
         }
     }
 }

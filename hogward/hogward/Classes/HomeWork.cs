@@ -11,6 +11,6 @@ namespace hogward.Classes
         public string DeadLine { get; set; }
         public string Title { get; set; }
         public int Point { get;set; }
-        public string Ans { get;set; }
+        public List<Answer> Ans { get; set; } = new();
     }
 }

@@ -5,7 +5,6 @@ namespace hogward;
 
 public class AuthorizePersons : Human
 {
-    public Lesson[] lessens { get; set; }
     public string room { get; set; }
     public string curriculum { get; set; }
     public string group { get; set; }

@@ -26,8 +26,8 @@ namespace hogward.Windows.Student
             var studetns = Program.StudentDetecter();
             string[] resualt = Program.UserFounder("student");
             StudentLessonsSelection.Title = resualt[0] + " " + resualt[1];
-            int count = Convert.ToInt32(resualt[2]);
-            AllowClass(studetns[count].Term);
+            int index = Convert.ToInt32(resualt[2]);
+            AllowClass(studetns[index].Term);
         }
         public void AllowClass(int term)
         {
@@ -83,99 +83,100 @@ namespace hogward.Windows.Student
         {
             string[] resualt = Program.UserFounder("student");
             var studetns = Program.StudentDetecter();
-            studetns[Convert.ToInt16(resualt[2])].lessens = new Lesson[8];
-            studetns[Convert.ToInt16(resualt[2])].plant = new string[2];
+            var lessons = Program.lessonSelectedDetecter();
+            int index = Convert.ToInt16(resualt[2]);
+            
             if (Chemistry.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[0] = new();
-                var Input = Chemistry.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[0].Name = "Chemistry";
-                studetns[Convert.ToInt16(resualt[2])].lessens[0].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[0].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[0].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[0].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[0].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = Chemistry.Text.Split(" ");
+                for (int i =0;i<lessons.Length;i++)
+                {
+                    if (lessons[i].Name == "Chemistry" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
             if (BotanicalOne.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[1] = new();
-                var Input = BotanicalOne.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[1].Name = "BotanicalOne";
-                studetns[Convert.ToInt16(resualt[2])].lessens[1].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[1].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[1].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[1].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[1].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = BotanicalOne.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "BotanicalOne" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
             if (BotanicalTwo.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[2] = new();
-                var Input = BotanicalTwo.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[2].Name = "BotanicalTwo";
-                studetns[Convert.ToInt16(resualt[2])].lessens[2].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[2].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[2].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[2].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[2].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = BotanicalTwo.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "BotanicalTwo" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
             if (BotanicalThree.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[3] = new();
-                var Input = BotanicalThree.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[3].Name = "BotanicalThree";
-                studetns[Convert.ToInt16(resualt[2])].lessens[3].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[3].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[3].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[3].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[3].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = BotanicalThree.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "BotanicalThree" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
-            if(BotanicalFour.IsEnabled == true)
+            if (BotanicalFour.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[4] = new();
-                var Input = BotanicalFour.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[4].Name = "BotanicalFour";
-                studetns[Convert.ToInt16(resualt[2])].lessens[4].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[4].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[4].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[4].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[4].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = BotanicalFour.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "BotanicalFour" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
-            if(Occultism.IsEnabled == true)
+            if (Occultism.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[5] = new();
-                var Input = Occultism.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[5].Name = "Occultism";
-                studetns[Convert.ToInt16(resualt[2])].lessens[5].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[5].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[5].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[5].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[5].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = Occultism.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "Occultism" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
-            if(Sport.IsEnabled == true)
+            if (Sport.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[6] = new();
-                var Input = Sport.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[6].Name = "Sport";
-                studetns[Convert.ToInt16(resualt[2])].lessens[6].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[6].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[6].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[6].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[6].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = Sport.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "Sport" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
 
             }
-            if(Plant.IsEnabled == true)
+            if (Plant.IsEnabled == true)
             {
-                studetns[Convert.ToInt16(resualt[2])].lessens[7] = new();
-                var Input = Plant.Text.Split(" ");
-                studetns[Convert.ToInt16(resualt[2])].lessens[7].Name = "Plant";
-                studetns[Convert.ToInt16(resualt[2])].lessens[7].Teacher[0] = Input[0];
-                studetns[Convert.ToInt16(resualt[2])].lessens[7].Teacher[1] = Input[1];
-                studetns[Convert.ToInt16(resualt[2])].lessens[7].Time[0] = Input[2];
-                studetns[Convert.ToInt16(resualt[2])].lessens[7].Time[1] = Input[3];
-                studetns[Convert.ToInt16(resualt[2])].lessens[7].Students.Add(studetns[Convert.ToInt16(resualt[2])]);
+                var LessonDetail = Plant.Text.Split(" ");
+                for (int i = 0; i < lessons.Length; i++)
+                {
+                    if (lessons[i].Name == "Plant" && lessons[i].Teacher[0] == LessonDetail[0] && lessons[i].Teacher[1] == LessonDetail[1] && lessons[i].Time[0] == LessonDetail[2])
+                    {
+                        lessons[i].Students.Add(studetns[index]);
+                    }
+                }
             }
             
-            File.WriteAllText("Students.json", JsonConvert.SerializeObject(studetns));
+            File.WriteAllText("LessonSelected.json", JsonConvert.SerializeObject(lessons));
             using (var writer = new StreamWriter("Error.txt"))
             {
                 writer.Write("Lessons seleced sucssefully");
