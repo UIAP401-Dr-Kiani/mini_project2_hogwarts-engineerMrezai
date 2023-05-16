@@ -32,5 +32,12 @@ namespace hogward.Windows.Professor
             ProfessorHomeWork professorHomeWork = new ProfessorHomeWork();
             professorHomeWork.Show();
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new();
+            mainWindow.Show();
+            Close();
+        }
     }
 }

@@ -12,6 +12,7 @@
     <None Remove="1_hogswarts-sss.jpg" />
     <None Remove="OIP %282%29.jfif" />
     <None Remove="OIP_2_11zon.jpg" />
+    <None Remove="Windows\Professor\3346893.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,7 @@
     <Resource Include="1_hogswarts-sss.jpg" />
     <Resource Include="OIP (2).jfif" />
     <Resource Include="OIP_2_11zon.jpg" />
+    <Resource Include="Windows\Professor\3346893.jpg" />
   </ItemGroup>
 
   <ItemGroup>
