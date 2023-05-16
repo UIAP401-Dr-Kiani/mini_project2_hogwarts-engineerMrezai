@@ -51,7 +51,7 @@ class Program
         return -1;
     }
     //Professor Class selector and Writer
-    public static void ProfessorSelector(string lesson1, string lesson2, string lesson3, int i)
+    public static int ProfessorSelector(string lesson1, string lesson2, string lesson3, int i)
     {
 
         Professor[] profesors = ProfessorDetecter();
@@ -88,15 +88,14 @@ class Program
             lessons.Add(Lesson3);
 
             File.WriteAllText("LessonSelected.json",JsonConvert.SerializeObject(lessons));
-            using (var writer = new StreamWriter("Error.txt"))
-                writer.WriteLine("Lessons Saved sucssesfully");
-            throw new System.Exception();
+            
+            return 1;
         }
         else
         {
-            using (var writer = new StreamWriter("Error.txt"))
-                writer.WriteLine("Same lesson choise in same date and same time");
-            throw new Exception();
+            
+            return 0;
+            
         }
     }
     //userfounder

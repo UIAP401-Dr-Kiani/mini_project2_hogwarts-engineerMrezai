@@ -10,8 +10,173 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Windows/Professor/3346893.jpg"/>
         </Grid.Background>
-        <Button Content="Lesson Selection" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,50,0,0" x:Name="LessonSelction" Click="LessonSelction_Click" Height="54" Width="153" Background="#FFB5179E" BorderBrush="#FFB5179E" Foreground="#FF560BAD" />
-        <Button Content="HomeWork" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,109,0,0" x:Name="HomeWork" Click="HomeWork_Click" Height="54" Width="153" Background="#FFB5179E" BorderBrush="#FFB5179E" Foreground="#FF560BAD"/>
-        <Button Content="logout" x:Name="Logout" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="153" Height="41" Background="#FFB5179E" BorderBrush="#FFB5179E" Foreground="#FF560BAD" Click="Logout_Click"/>
+        <Button Content="Lesson Selection" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,50,0,0" x:Name="LessonSelction" Click="LessonSelction_Click" Height="54" Width="153" BorderBrush="#FF4361EE" Foreground="White" >
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button Content="HomeWork" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,109,0,0" x:Name="HomeWork" Click="HomeWork_Click" Height="54" Width="153" BorderBrush="#FF4361EE" Foreground="White">
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.495"/>
+            </Button.Background>
+        </Button>
+        <Button Content="logout" x:Name="Logout" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="153" Height="41" BorderBrush="#FF4361EE" Foreground="White" Click="Logout_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.6"/>
+            </Button.Background>
+        </Button>
+
+
+
+
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,312,0,0" Height="29" Width="147" x:Name="lesson1" FontSize="16" Visibility="Hidden">
+            <ComboBoxItem Content="Chemistry"/>
+            <ComboBoxItem Content="BotanicalOne"/>
+            <ComboBoxItem Content="BotanicalTwo"/>
+            <ComboBoxItem Content="BotanicalThree"/>
+            <ComboBoxItem Content="BotanicalFour"/>
+            <ComboBoxItem Content="Occultism"/>
+            <ComboBoxItem Content="Sport"/>
+            <ComboBoxItem Content="Plant"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,312,0,0" Height="29" Width="148" x:Name="lesson1Time1" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="8:00-10:00"/>
+            <ComboBoxItem Content="10:00-12:00"/>
+            <ComboBoxItem Content="14:00-16:00"/>
+            <ComboBoxItem Content="16:00-18:00"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,312,0,0" Height="29" Width="148" x:Name="lesson1Date1" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+            <ComboBoxItem Content="Monday"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content='Wednesday'/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="483,312,0,0" Height="29" Width="148" x:Name="lesson1Time2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="8:00-10:00"/>
+            <ComboBoxItem Content="10:00-12:00"/>
+            <ComboBoxItem Content="14:00-16:00"/>
+            <ComboBoxItem Content="16:00-18:00"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="641,312,0,0" Height="29" Width="147" x:Name="lesson1Date2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+            <ComboBoxItem Content="Monday"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content='Wednesday'/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,355,0,0" Height="29" Width="147" x:Name="lesson2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Chemistry"/>
+            <ComboBoxItem Content="BotanicalOne"/>
+            <ComboBoxItem Content="BotanicalTwo"/>
+            <ComboBoxItem Content="BotanicalThree"/>
+            <ComboBoxItem Content="BotanicalFour"/>
+            <ComboBoxItem Content="Occultism"/>
+            <ComboBoxItem Content="Sport"/>
+            <ComboBoxItem Content="Plant"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,355,0,0" Height="29" Width="148" x:Name="lesson2Time1" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="8:00-10:00"/>
+            <ComboBoxItem Content="10:00-12:00"/>
+            <ComboBoxItem Content="14:00-16:00"/>
+            <ComboBoxItem Content="16:00-18:00"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,355,0,0" Height="29" Width="148" x:Name="lesson2Date1" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+            <ComboBoxItem Content="Monday"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content='Wednesday'/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="483,355,0,0" Height="29" Width="148" x:Name="lesson2Time2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="8:00-10:00"/>
+            <ComboBoxItem Content="10:00-12:00"/>
+            <ComboBoxItem Content="14:00-16:00"/>
+            <ComboBoxItem Content="16:00-18:00"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="641,355,0,0" Height="29" Width="147" x:Name="lesson2Date2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+            <ComboBoxItem Content="Monday"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content='Wednesday'/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,398,0,0" Height="29" Width="147" x:Name="lesson3" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Chemistry"/>
+            <ComboBoxItem Content="BotanicalOne"/>
+            <ComboBoxItem Content="BotanicalTwo"/>
+            <ComboBoxItem Content="BotanicalThree"/>
+            <ComboBoxItem Content="BotanicalFour"/>
+            <ComboBoxItem Content="Occultism"/>
+            <ComboBoxItem Content="Sport"/>
+            <ComboBoxItem Content="Plant"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,398,0,0" Height="29" Width="148" x:Name="lesson3Time1" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="8:00-10:00"/>
+            <ComboBoxItem Content="10:00-12:00"/>
+            <ComboBoxItem Content="14:00-16:00"/>
+            <ComboBoxItem Content="16:00-18:00"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,398,0,0" Height="29" Width="148" x:Name="lesson3Date1" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+            <ComboBoxItem Content="Monday"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content='Wednesday'/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="483,398,0,0" Height="29" Width="148" x:Name="lesson3Time2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="8:00-10:00"/>
+            <ComboBoxItem Content="10:00-12:00"/>
+            <ComboBoxItem Content="14:00-16:00"/>
+            <ComboBoxItem Content="16:00-18:00"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="641,398,0,0" Height="29" Width="147" x:Name="lesson3Date2" FontSize="16" Visibility="Hidden"  >
+            <ComboBoxItem Content="Saturday"/>
+            <ComboBoxItem Content="Sunday"/>
+            <ComboBoxItem Content="Monday"/>
+            <ComboBoxItem Content="Tuesday"/>
+            <ComboBoxItem Content='Wednesday'/>
+        </ComboBox>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,441,0,0" Height="39" Width="148" Content="Select" x:Name="Select" Foreground="White" FontSize="16" Click="Select_Click" Visibility="Hidden" >
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF4361EE" Opacity="1"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.6"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Margin="558,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="41" Width="230" x:Name="ID" TextAlignment="Center" Foreground="#FF4CC9F0" FontSize="16"  >
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="Lesson" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,271,0,0" Height="27" Width="152" Text="lesson" TextAlignment="Center" Foreground="#FFFFFCFC" FontSize="16" Visibility="Hidden"  >
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="FirstClass" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,271,0,0" Height="27" Width="157" Text="First Class" TextAlignment="Center" FontSize="16" Visibility="Hidden"  >
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="White" Opacity="0.995"/>
+            </TextBlock.Foreground>
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="FirstDay" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,271,0,0" Height="27" Width="158" Text="Fist Day" TextAlignment="Center" Foreground="White" FontSize="16" Visibility="Hidden"  >
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="SecondClass" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="479,271,0,0" Height="27" Width="157" Text="Second Class" TextAlignment="Center" Foreground="White" FontSize="16" Visibility="Hidden"  >
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock x:Name="SecondDay" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="636,271,0,0" Height="27" Width="152" Text="Second Day" TextAlignment="Center" Foreground="White" FontSize="16" Visibility="Hidden"  >
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
     </Grid>
 </Window>

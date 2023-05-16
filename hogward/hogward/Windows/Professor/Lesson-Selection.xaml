@@ -9,11 +9,11 @@
     <Grid>
 
         <TextBlock Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="20" Width="790" x:Name="ID" TextAlignment="Center"/>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="20" Width="790" BorderBrush="Black" BorderThickness="1,1,1,1"/>
-        
-        
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,160,0,0" Height="20" Width="790" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+
+
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" Height="20" Width="150" Text="lesson" TextAlignment="Center"/>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,87,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0" Height="20" Width="150" x:Name="lesson1">
             <ComboBoxItem Content="Chemistry"/>
             <ComboBoxItem Content="BotanicalOne"/>
@@ -25,7 +25,7 @@
             <ComboBoxItem Content="Plant"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,40,0,0" Height="20" Width="150" Text="First Time" TextAlignment="Center"/>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,40,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,77,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,70,0,0" Height="20" Width="150" x:Name="lesson1Time1">
             <ComboBoxItem Content="8:00-10:00"/>
             <ComboBoxItem Content="10:00-12:00"/>
@@ -33,7 +33,7 @@
             <ComboBoxItem Content="16:00-18:00"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,40,0,0" Height="20" Width="150" Text="Fist Day" TextAlignment="Center"/>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,40,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,87,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,70,0,0" Height="20" Width="150" x:Name="lesson1Date1">
             <ComboBoxItem Content="Saturday"/>
             <ComboBoxItem Content="Sunday"/>
@@ -42,7 +42,7 @@
             <ComboBoxItem Content='Wednesday'/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,40,0,0" Height="20" Width="150" Text="Secend Time" TextAlignment="Center"/>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,40,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Center" Margin="485,0,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,70,0,0" Height="20" Width="150" x:Name="lesson1Time2">
             <ComboBoxItem Content="8:00-10:00"/>
             <ComboBoxItem Content="10:00-12:00"/>
@@ -50,7 +50,7 @@
             <ComboBoxItem Content="16:00-18:00"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,40,0,0" Height="20" Width="150" Text="Secend Day" TextAlignment="Center"/>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,40,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,87,0,0" Height="20" Width="150" BorderBrush="Black" BorderThickness="1,1,1,1"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="650,70,0,0" Height="20" Width="150" x:Name="lesson1Date2">
             <ComboBoxItem Content="Saturday"/>
             <ComboBoxItem Content="Sunday"/>
@@ -97,8 +97,8 @@
             <ComboBoxItem Content='Wednesday'/>
         </ComboBox>
 
-        
-        
+
+
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0" Height="20" Width="150" x:Name="lesson3">
             <ComboBoxItem Content="Chemistry"/>
             <ComboBoxItem Content="BotanicalOne"/>
