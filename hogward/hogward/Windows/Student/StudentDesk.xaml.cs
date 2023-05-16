@@ -27,7 +27,7 @@ public partial class StudentDesk : Window
     public StudentDesk()
     {
         InitializeComponent();
-        Task.Factory.StartNew(train.TravelTrain);
+        train.TravelTrain();
         int status = train.TrainCheack();
         if (status == 0)
         {
