@@ -9,7 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1_hogswarts-sss.jpg" />
+    <None Remove="OIP %282%29.jfif" />
+    <None Remove="OIP_2_11zon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1_hogswarts-sss.jpg" />
+    <Resource Include="OIP (2).jfif" />
+    <Resource Include="OIP_2_11zon.jpg" />
   </ItemGroup>
 
   <ItemGroup>
