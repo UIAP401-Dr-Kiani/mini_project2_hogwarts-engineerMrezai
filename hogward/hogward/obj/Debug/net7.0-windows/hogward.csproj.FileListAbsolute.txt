@@ -44,7 +44,6 @@ D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\MainWindow.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreMassageSender.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreWorkDesk.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.g.cs
-D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\Lesson-Selection.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorDesk.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\TicketEmail.g.cs
@@ -60,7 +59,6 @@ D:\Kiani Git\hogward\hogward\hogward\bin\Debug\net7.0-windows\Newtonsoft.Json.dl
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreMassageSender.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Dumbledore\DumbledoreWorkDesk.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Error\Error page.baml
-D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\Lesson-Selection.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorDesk.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentDesk.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\TicketEmail.baml
@@ -74,8 +72,6 @@ D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\hogward.genruntime
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\ref\hogward.dll
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentLessonSelection.baml
-D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorHomeWork.g.cs
-D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Professor\ProfessorHomeWork.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Chart.g.cs
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\Chart.baml
 D:\Kiani Git\hogward\hogward\hogward\obj\Debug\net7.0-windows\Windows\Student\StudentHomeWork.g.cs

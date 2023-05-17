@@ -9,8 +9,16 @@
         <Grid.Background>
             <ImageBrush ImageSource="/1_hogswarts-sss.jpg"/>
         </Grid.Background>
-        <TextBox Text="User-name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="288,23,0,0" x:Name="UserName" Height="27" Width="316" TextAlignment="Center" Background="#FFB5179E" Foreground="#FF7209B7" SelectionBrush="#FF4CC9F0" SelectionTextBrush="#FF4895EF" BorderBrush="#FF7209B7" FontSize="16"/>
-        <TextBox Text="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="288,63,0,0" x:Name="PassWord" Height="27" Width="316" TextAlignment="Center" Background="#FFB5179E" BorderBrush="#FF7209B7" Foreground="#FF7209B7" SelectionBrush="#FF4CC9F0" SelectionTextBrush="#FF4895EF" FontSize="16"/>
+        <TextBox Text="Username" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="288,23,0,0" x:Name="UserName" Height="27" Width="316" TextAlignment="Center" Background="#FFB5179E" Foreground="#FF7209B7" SelectionBrush="#FF4CC9F0" SelectionTextBrush="#FF4895EF" BorderBrush="#FF7209B7" FontSize="16">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Text="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="288,63,0,0" x:Name="PassWord" Height="27" Width="316" TextAlignment="Center" Background="#FFB5179E" BorderBrush="#FF7209B7" Foreground="#FF7209B7" SelectionBrush="#FF4CC9F0" SelectionTextBrush="#FF4895EF" FontSize="16">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="288,103,0,0" x:Name="Students" Height="26" Width="316" Click="Students_OnClick" BorderBrush="#FFF72585" Foreground="#FF7209B7" Background="#FFF72585" FontSize="16">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -24,6 +32,10 @@
             <ComboBoxItem Content="Professor"/>
             <ComboBoxItem Content="Student"/>
         </ComboBox>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,491,0,0" VerticalAlignment="Top" Width="80" Height="27" FontSize="16" x:Name="Exit" Click="Exit_Click" Background="#FFF72585" BorderBrush="#FFF72585" Foreground="#FF7209B7"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,491,0,0" VerticalAlignment="Top" Width="80" Height="27" FontSize="16" x:Name="Exit" Click="Exit_Click" Background="#FFF72585" BorderBrush="#FFF72585" Foreground="#FF7209B7">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

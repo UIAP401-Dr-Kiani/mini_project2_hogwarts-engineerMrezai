@@ -190,7 +190,7 @@ namespace hogward.Windows.Professor {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/hogward;component/windows/professor/lesson-selection.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/hogward;V1.0.0.0;component/windows/professor/lesson-selection.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Windows\Professor\Lesson-Selection.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
