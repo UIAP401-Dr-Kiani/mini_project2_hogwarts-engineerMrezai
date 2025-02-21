@@ -1,12 +1,18 @@
 ﻿<Window x:Class="hogward.Windows.StudentDesk"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hogward.Windows"
         mc:Ignorable="d"
-        Title="StudentDesk" Height="150" Width="215" ResizeMode="CanMinimize">
+        Title="StudentDesk" Height="170" Width="215" ResizeMode="CanMinimize">
     <Grid>
         <Button Content="Email" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" x:Name="email" Click="email_Click" Height="20" Width="180" />
+        <Button Content="Lesson selection" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" x:Name="Lesson_Selction" Click="Lesson_Selction_Click" Height="20" Width="180" />
+        <Button Content="attendance on the train" FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="95,100,0,0" x:Name="Train" Click="Train_Click" Height="20" Width="86" />
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-95,100,0,0" x:Name="TrainTime" Height="20" Width="85" TextAlignment="Center" FontSize="14" TextWrapping="WrapWithOverflow"/>
+        <Border BorderBrush="Black" BorderThickness="1,1,1,1" Margin="-95,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="20" Width="85"/>
+        <Button Content="Chart" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.851,-0.081" Width="180" Height="20" x:Name="Chart" Click="Chart_Click"/>
     </Grid>
+
 </Window>

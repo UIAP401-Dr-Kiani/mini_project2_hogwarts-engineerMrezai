@@ -2,16 +2,16 @@
 
 public class Human
 {
-    public string Name { get; set; }
-    public string family { get; set; }
-    public string dateOfBirth { get; set; }
-    public string father { get; set; }
-    public string username { get; set; }
-    public string password { get; set; }
+    public string Name { get; set; } 
+    public string Family { get; set; }
+    public string DateOfBirth { get; set; }
+    public string Father { get; set; }
+    public string Username { get; set; }
+    public string Password { get; set; }
     //public BreedType type { get; set; }
-    public string type { get; set; }
-    //public Gender gender { get; set; }
-    public string gender { get; set; }
+    public string Type { get; set; }
+    public Gender Gender { get; set; }
+    //public string Gender { get; set; }
 
 }
 

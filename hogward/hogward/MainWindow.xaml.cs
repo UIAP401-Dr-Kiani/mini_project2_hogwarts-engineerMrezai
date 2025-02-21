@@ -1,6 +1,10 @@
-﻿using hogward.Windows;
+﻿using hogward.Classes;
+using hogward.Windows;
+using hogward.Windows.Professor;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
 
@@ -11,52 +15,73 @@ namespace hogward
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
         private void Students_OnClick(object sender, RoutedEventArgs e)
         {
-            List<AuthorizePersons> authorizePersons = program.AuthorizePersonsDetecter();
-            try 
+            var authorizePersons = Program.AuthorizePersonsDetecter();
+
+            if (Type.Text == "Dumbledore")
             {
-                if (Type.Text == "Dumbledore")
+                if (UserName.Text == "Admin" && PassWord.Text == "Admin")
                 {
-                    if (UserName.Text == "Admin" && PassWord.Text == "Admin")
-                    {
-                        DumbledoreWorkDesk dumbledoreWorkDesk = new DumbledoreWorkDesk();
-                        dumbledoreWorkDesk.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        throw new System.Exception();
-                    }
+                    DumbledoreWorkDesk dumbledoreWorkDesk = new DumbledoreWorkDesk();
+                    dumbledoreWorkDesk.Show();
+                    Program.Writer("-1", "-1");
+                    this.Close();
+
                 }
-                else if (Type.Text == "Professor")
+                else
                 {
-                    program.LoginCheck("teacher", UserName.Text, PassWord.Text);
-                    Window window = new Window();
-                    window.Show();
+                    throw new System.Exception();
+                }
+            }
+            else if (Type.Text == "Professor")
+            {
+                int count = Program.LoginCheck("teacher", UserName.Text, PassWord.Text);
+                if (count == 1)
+                {
+                    ProfessorDesk professorDesk = new ProfessorDesk();
+                    professorDesk.Show();
                     this.Close();
                 }
-                else if (Type.Text == "Student")
+                else if (count == -1)
                 {
-                    program.LoginCheck("student",UserName.Text,PassWord.Text);
+                    using (StreamWriter ln = new StreamWriter("Error.txt"))
+                    {
+                        ln.WriteLine("UserName or Password not Found");
+                        ln.Close();
+                    }
+                    Error_page error_Page = new Error_page();
+                    error_Page.Show();
+                }
+            }
+            else if (Type.Text == "Student")
+            {
+                int count = Program.LoginCheck("student", UserName.Text, PassWord.Text);
+                if (count == 1)
+                {
                     StudentDesk studentDesk = new StudentDesk();
                     studentDesk.Show();
                     this.Close();
                 }
-            }
-            catch
-            {
-                using (StreamWriter ln = new StreamWriter("Error.txt"))
+                else
                 {
-                    ln.WriteLine("UserName or Password not Found");
-                    ln.Close();
+                    using (StreamWriter ln = new StreamWriter("Error.txt"))
+                    {
+                        ln.WriteLine("UserName or Password not Found");
+                        ln.Close();
+                    }
+                    Error_page error_Page = new Error_page();
+                    error_Page.Show();
                 }
-                Error_page error_Page = new Error_page();
-                error_Page.Show();
             }
+           
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,0 +1,210 @@
+﻿<Window x:Class="hogward.Windows.Professor.ProfessorDesk"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hogward.Windows.Professor"
+        mc:Ignorable="d"
+        Title="ProfessorDesk" Height="600" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/Windows/Professor/3346893.jpg"/>
+    </Window.Background>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="600" x:Name="MainGrid">
+        <Button Content="Lesson Selection" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,50,0,0" x:Name="LessonSelction" Click="LessonSelction_Click" Height="54" Width="153" BorderBrush="#FF4361EE" Foreground="White" >
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button Content="HomeWork" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,109,0,0" x:Name="HomeWork" Click="HomeWork_Click" Height="54" Width="153" BorderBrush="#FF4361EE" Foreground="White">
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.495"/>
+            </Button.Background>
+        </Button>
+        <Button Content="logout" x:Name="Logout" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="153" Height="41" BorderBrush="#FF4361EE" Foreground="White" Click="Logout_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF4361EE" Opacity="0.6"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Margin="558,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="41" Width="230" x:Name="ID" TextAlignment="Center" Foreground="#FF4CC9F0" FontSize="16"  >
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+            </TextBlock.Background>
+        </TextBlock>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="800" x:Name="LessonSelectionGrid" Visibility="Hidden">
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Width="147" x:Name="lesson1" FontSize="16" Margin="11,187,0,0"  >
+                <ComboBoxItem Content="Chemistry"/>
+                <ComboBoxItem Content="BotanicalOne"/>
+                <ComboBoxItem Content="BotanicalTwo"/>
+                <ComboBoxItem Content="BotanicalThree"/>
+                <ComboBoxItem Content="BotanicalFour"/>
+                <ComboBoxItem Content="Occultism"/>
+                <ComboBoxItem Content="Sport"/>
+                <ComboBoxItem Content="Plant"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="168,186,0,0" Height="29" Width="148" x:Name="lesson1Time1" FontSize="16"    >
+                <ComboBoxItem Content="8:00-10:00"/>
+                <ComboBoxItem Content="10:00-12:00"/>
+                <ComboBoxItem Content="14:00-16:00"/>
+                <ComboBoxItem Content="16:00-18:00"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,186,0,0" Height="29" Width="148" x:Name="lesson1Date1" FontSize="16"    >
+                <ComboBoxItem Content="Saturday"/>
+                <ComboBoxItem Content="Sunday"/>
+                <ComboBoxItem Content="Monday"/>
+                <ComboBoxItem Content="Tuesday"/>
+                <ComboBoxItem Content='Wednesday'/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="482,186,0,0" Height="29" Width="148" x:Name="lesson1Time2" FontSize="16"    >
+                <ComboBoxItem Content="8:00-10:00"/>
+                <ComboBoxItem Content="10:00-12:00"/>
+                <ComboBoxItem Content="14:00-16:00"/>
+                <ComboBoxItem Content="16:00-18:00"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="640,186,0,0" Height="29" Width="147" x:Name="lesson1Date2" FontSize="16"    >
+                <ComboBoxItem Content="Saturday"/>
+                <ComboBoxItem Content="Sunday"/>
+                <ComboBoxItem Content="Monday"/>
+                <ComboBoxItem Content="Tuesday"/>
+                <ComboBoxItem Content='Wednesday'/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,229,0,0" Height="29" Width="147" x:Name="lesson2" FontSize="16"    >
+                <ComboBoxItem Content="Chemistry"/>
+                <ComboBoxItem Content="BotanicalOne"/>
+                <ComboBoxItem Content="BotanicalTwo"/>
+                <ComboBoxItem Content="BotanicalThree"/>
+                <ComboBoxItem Content="BotanicalFour"/>
+                <ComboBoxItem Content="Occultism"/>
+                <ComboBoxItem Content="Sport"/>
+                <ComboBoxItem Content="Plant"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="168,229,0,0" Height="29" Width="148" x:Name="lesson2Time1" FontSize="16"    >
+                <ComboBoxItem Content="8:00-10:00"/>
+                <ComboBoxItem Content="10:00-12:00"/>
+                <ComboBoxItem Content="14:00-16:00"/>
+                <ComboBoxItem Content="16:00-18:00"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,229,0,0" Height="29" Width="148" x:Name="lesson2Date1" FontSize="16"    >
+                <ComboBoxItem Content="Saturday"/>
+                <ComboBoxItem Content="Sunday"/>
+                <ComboBoxItem Content="Monday"/>
+                <ComboBoxItem Content="Tuesday"/>
+                <ComboBoxItem Content='Wednesday'/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="482,229,0,0" Height="29" Width="148" x:Name="lesson2Time2" FontSize="16"    >
+                <ComboBoxItem Content="8:00-10:00"/>
+                <ComboBoxItem Content="10:00-12:00"/>
+                <ComboBoxItem Content="14:00-16:00"/>
+                <ComboBoxItem Content="16:00-18:00"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="640,229,0,0" Height="29" Width="147" x:Name="lesson2Date2" FontSize="16"    >
+                <ComboBoxItem Content="Saturday"/>
+                <ComboBoxItem Content="Sunday"/>
+                <ComboBoxItem Content="Monday"/>
+                <ComboBoxItem Content="Tuesday"/>
+                <ComboBoxItem Content='Wednesday'/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,272,0,0" Height="29" Width="147" x:Name="lesson3" FontSize="16"    >
+                <ComboBoxItem Content="Chemistry"/>
+                <ComboBoxItem Content="BotanicalOne"/>
+                <ComboBoxItem Content="BotanicalTwo"/>
+                <ComboBoxItem Content="BotanicalThree"/>
+                <ComboBoxItem Content="BotanicalFour"/>
+                <ComboBoxItem Content="Occultism"/>
+                <ComboBoxItem Content="Sport"/>
+                <ComboBoxItem Content="Plant"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="168,272,0,0" Height="29" Width="148" x:Name="lesson3Time1" FontSize="16"    >
+                <ComboBoxItem Content="8:00-10:00"/>
+                <ComboBoxItem Content="10:00-12:00"/>
+                <ComboBoxItem Content="14:00-16:00"/>
+                <ComboBoxItem Content="16:00-18:00"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,272,0,0" Height="29" Width="148" x:Name="lesson3Date1" FontSize="16"    >
+                <ComboBoxItem Content="Saturday"/>
+                <ComboBoxItem Content="Sunday"/>
+                <ComboBoxItem Content="Monday"/>
+                <ComboBoxItem Content="Tuesday"/>
+                <ComboBoxItem Content='Wednesday'/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="482,272,0,0" Height="29" Width="148" x:Name="lesson3Time2" FontSize="16"    >
+                <ComboBoxItem Content="8:00-10:00"/>
+                <ComboBoxItem Content="10:00-12:00"/>
+                <ComboBoxItem Content="14:00-16:00"/>
+                <ComboBoxItem Content="16:00-18:00"/>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Margin="640,272,0,0" Height="29" Width="147" x:Name="lesson3Date2" FontSize="16"    >
+                <ComboBoxItem Content="Saturday"/>
+                <ComboBoxItem Content="Sunday"/>
+                <ComboBoxItem Content="Monday"/>
+                <ComboBoxItem Content="Tuesday"/>
+                <ComboBoxItem Content='Wednesday'/>
+            </ComboBox>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="635,315,0,0" Height="39" Width="148" Content="Select" x:Name="Select" Foreground="White" FontSize="16" Click="Select_Click"   >
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF4361EE" Opacity="1"/>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <SolidColorBrush Color="#FF4361EE" Opacity="0.6"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="Lesson" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,145,0,0" Height="27" Width="152" Text="lesson" TextAlignment="Center" Foreground="#FFFFFCFC" FontSize="16"    >
+                <TextBlock.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="FirstClass" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="163,145,0,0" Height="27" Width="158" Text="First Class" TextAlignment="Center" FontSize="16"    >
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="White" Opacity="0.995"/>
+                </TextBlock.Foreground>
+                <TextBlock.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="FirstDay" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0" Height="27" Width="158" Text="Fist Day" TextAlignment="Center" Foreground="White" FontSize="16"    >
+                <TextBlock.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="SecondClass" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="478,145,0,0" Height="27" Width="157" Text="Second Class" TextAlignment="Center" Foreground="White" FontSize="16"    >
+                <TextBlock.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="SecondDay" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="635,145,0,0" Height="27" Width="152" Text="Second Day" TextAlignment="Center" Foreground="White" FontSize="16"    >
+                <TextBlock.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="11,315,0,0" VerticalAlignment="Top" Height="39" Width="147" BorderBrush="#FF4361EE" Foreground="White" FontSize="16" Click="Back_Click" >
+                <Button.Background>
+                    <SolidColorBrush Color="#FF4361EE" Opacity="0.6"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="600" x:Name="HomeWorkGrid" Visibility="Hidden">
+            <ComboBox Name="ListLesson" Width="566" Height="42" Margin="120,84,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Black"/>
+            <DatePicker x:Name="DeadLine" Height="51" Width="566" Margin="120,147,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}"/>
+            <TextBox x:Name="Title" Margin="120,220,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="201" Width="566" Foreground="White" BorderBrush="#FF4895EF">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button Width="175" Height="42" Margin="511,439,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="Send" Click="Send_Click" Content="Send" FontSize="25" Foreground="White">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF4361EE" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <TextBox Width="206" Height="42" Margin="300,439,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Point" TextAlignment="Center" x:Name="Point" BorderBrush="#FF4895EF" Foreground="White" FontSize="25">
+                <TextBox.Background>
+                    <SolidColorBrush Color="#FF4895EF" Opacity="0.6"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button Click="Back_Click" Content="Back" HorizontalAlignment="Left" Margin="120,439,0,0" VerticalAlignment="Top" Height="42" Width="175" FontSize="20" Foreground="White" BorderBrush="#FF4361EE">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF4361EE" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+
+</Window>

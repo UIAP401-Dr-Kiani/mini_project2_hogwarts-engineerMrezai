@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Chemistry",
+    "PresentationSemester": 1
+  },
+  {
+    "Name": "BotanicalOne",
+    "PresentationSemester": 1
+  },
+  {
+    "Name": "BotanicalTwo",
+    "PresentationSemester": 2
+  },
+  {
+    "Name": "BotanicalThree",
+    "PresentationSemester": 3
+  },
+  {
+    "Name": "BotanicalFour",
+    "PresentationSemester": 4
+  },
+  {
+    "Name": "Occultism",
+    "PresentationSemester": 2
+  },
+  {
+    "Name": "Sport",
+    "PresentationSemester": 3
+  },
+  {
+    "Name": "Plant",
+    "PresentationSemester": 4
+  }
+]

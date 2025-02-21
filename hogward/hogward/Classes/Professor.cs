@@ -1,10 +1,10 @@
-﻿using System.Dynamic;
+﻿using System.Collections.Generic;
+using System.Dynamic;
+using System.Windows.Documents;
 
 namespace hogward;
 
 public class Professor : AuthorizePersons
 {
-    protected string time { get; set; }
-    protected string lessens { get; set; } 
-    protected bool SimultaneousTeaching { get; set; }
+    public bool SimultaneousTeaching { get; set; }
 }

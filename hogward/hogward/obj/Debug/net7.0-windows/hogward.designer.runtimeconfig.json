@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\mahdi rezai\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mahdi rezai\\.nuget\\packages",
+      "C:\\Users\\Mahdi Rezai\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Mahdi Rezai\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

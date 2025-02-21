@@ -2,8 +2,10 @@
 
 public class Student : AuthorizePersons
 {
-    protected string PassedUnits { get; set; }
-    protected string Term { get; set; }
-    protected string HostelNumber { get; set; }
-   
+    public string[] PassedUnits { get; set; }
+    public string[] plant { get; set; } = new string[8];
+    public int Term { get; set; } = 1;
+    public string HostelNumber { get; set; }
+    public bool IsInHogward { get; set; } = false;
+    public int TrainNum = -1;
 }
